@@ -99,7 +99,7 @@ export default function Home() {
         >
           <h1 className="text-3xl font-extrabold leading-snug">
             Diventa un <br />
-            Professionista Consapevole
+            Terapista D&apos;Elite
           </h1>
           <p className="text-base text-gray-300">
             Percorsi per operatori olistici e del benessere che vogliono distinguersi e crescere davvero.
