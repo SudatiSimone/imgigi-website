@@ -16,37 +16,81 @@ export default function Home() {
       <SocialSidebar />
 
       {/* HERO */}
-      <section id="hero" className="text-center py-20 px-6 bg-gradient-to-br from-gray-900 to-black">
+      <section
+        id="hero"
+        className="relative bg-gradient-to-br from-gray-900 to-black text-white overflow-hidden pt-10 md:pt-16 pb-16 px-4 sm:px-6 md:px-12 xl:px-24"
+      >
+        {/* Layout desktop */}
+        <div className="hidden md:grid max-w-7xl mx-auto grid-cols-1 md:grid-cols-2 items-center gap-12">
+          {/* Testo Hero */}
+          <div className="relative z-10 text-left space-y-6">
+            <h1 className="text-4xl md:text-5xl xl:text-6xl font-extrabold leading-tight">
+              Diventa un <br />
+              Professionista Consapevole
+            </h1>
+            <p className="text-lg md:text-xl text-gray-300">
+              Percorsi per operatori olistici e del benessere che vogliono distinguersi e crescere davvero.
+            </p>
+            <a
+              href="#percorso"
+              className="inline-block mt-2 px-8 py-3 bg-emerald-500 text-black font-semibold rounded-full shadow-lg hover:scale-105 transition duration-300"
+            >
+              Scopri il percorso
+            </a>
+          </div>
 
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: 'easeOut' }}
-          className="text-4xl md:text-6xl font-extrabold text-white text-center"
-        >
-          Diventa un Professionista Consapevole
-        </motion.p>
+          {/* Immagine desktop */}
+          <div className="relative flex justify-center md:justify-end z-0">
+            <img
+              src="/hero.jpg"
+              alt="Gianluigi Merisio"
+              className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl object-contain opacity-95"
+            />
+          </div>
+        </div>
 
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.4 }}className="text-xl md:text-2xl text-gray-300 mb-8">Percorsi per operatori olistici e del benessere che vogliono distinguersi e crescere davvero.</motion.p>
+      {/* MOBILE HERO - solo su mobile */}
+      <div className="relative flex flex-col items-center text-center md:hidden px-4 pt-6 pb-16 bg-gradient-to-br from-gray-900 to-black text-white">
         
-        <motion.a
-          href="#percorso"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.8 }}
-          className="inline-block mt-8 px-8 py-3 bg-emerald-500 text-black font-semibold rounded-full hover:scale-105 transition"
-        >
-          Scopri il percorso
-        </motion.a>
+        {/* Immagine con sfumatura e margine basso ridotto */}
+        <div className="w-72 relative -mb-12 z-10">
+          <img
+            src="/hero.jpg"
+            alt="Gianluigi Merisio"
+            className="w-full object-contain"
+            style={{
+              maskImage: 'linear-gradient(to bottom, black 60%, rgba(0, 0, 0, 0.4) 85%, transparent 100%)',
+              WebkitMaskImage: 'linear-gradient(to bottom, black 60%, rgba(0, 0, 0, 0.4) 85%, transparent 100%)',
+            }}
+          />
+        </div>
+
+        {/* Testo sovrapposto alla sfumatura */}
+        <div className="relative z-20 mt-2 space-y-4">
+          <h1 className="text-3xl font-extrabold leading-snug">
+            Diventa un <br />
+            Professionista Consapevole
+          </h1>
+          <p className="text-base text-gray-300">
+            Percorsi per operatori olistici e del benessere che vogliono distinguersi e crescere davvero.
+          </p>
+          <a
+            href="#percorso"
+            className="inline-block mt-2 px-6 py-3 bg-emerald-500 text-black font-semibold rounded-full shadow hover:scale-105 transition"
+          >
+            Scopri il percorso
+          </a>
+        </div>
+      </div>
+
       </section>
+
+
 
       {/* CHI SONO */}
       <section id="chi-sono" className="max-w-4xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center gap-10">
-        
+
         <img
           src="/fotoprofilo.jpg"
           alt="Foto di Merisio Gianluigi"
@@ -59,14 +103,14 @@ export default function Home() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-        <div>
-          <h2 className="text-3xl font-bold mb-4">Merisio Gianluigi</h2>
-          <p className="text-gray-300 text-lg leading-relaxed">
-            Professionista con eccellenti competenze tecniche e manageriali, maturate in molti anni nel settore delle vendite e del beauty.
-            Mi distinguo per leadership, pianificazione strategica e capacità di aiutare aziende e persone a raggiungere risultati concreti.
-            Amo costruire relazioni autentiche, stimolare il cambiamento e accompagnare professionisti nella loro evoluzione.
-          </p>
-        </div>
+          <div>
+            <h2 className="text-3xl font-bold mb-4">Merisio Gianluigi</h2>
+            <p className="text-gray-300 text-lg leading-relaxed">
+              Professionista con eccellenti competenze tecniche e manageriali, maturate in molti anni nel settore delle vendite e del beauty.
+              Mi distinguo per leadership, pianificazione strategica e capacità di aiutare aziende e persone a raggiungere risultati concreti.
+              Amo costruire relazioni autentiche, stimolare il cambiamento e accompagnare professionisti nella loro evoluzione.
+            </p>
+          </div>
 
         </motion.div>
       </section>
@@ -76,147 +120,147 @@ export default function Home() {
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-center text-white">Percorso Strategico Evolutivo</h2>
 
-                {/* TIMELINE DEL PERCORSO */}
-                <section className="py-12">
-                  <div className="max-w-5xl mx-auto px-6">
-                    <h3 className="text-2xl font-bold mb-8 text-center text-emerald-400">Le 5 Fasi del Percorso Strategico Evolutivo</h3>
-                    <div className="relative border-l border-gray-700 ml-4 space-y-10">
+          {/* TIMELINE DEL PERCORSO */}
+          <section className="py-12">
+            <div className="max-w-5xl mx-auto px-6">
+              <h3 className="text-2xl font-bold mb-8 text-center text-emerald-400">Le 5 Fasi del Percorso Strategico Evolutivo</h3>
+              <div className="relative border-l border-gray-700 ml-4 space-y-10">
 
-                      <motion.div
-                        initial={{ opacity: 0, y: 40 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.4, delay: 0.2 }}
-                        viewport={{ once: true }}
-                      >
+                <motion.div
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.2 }}
+                  viewport={{ once: true }}
+                >
 
-                      {/* Fase 1 */}
-                      <div className="pl-6 relative">
-                        <div className="absolute left-[-14px] top-1 w-4 h-4 bg-emerald-400 rounded-full"></div>
-                        <h4 className="text-xl font-semibold text-white">1. Sbatti la testa contro lo specchio™</h4>
-                        <p className="text-gray-300">Consapevolezza, verità, roadmap iniziale — test diagnostici e mappatura punti ciechi.</p>
-                      </div>
-
-                      </motion.div>
-
-                      <motion.div
-                        initial={{ opacity: 0, y: 40 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.4, delay: 0.2 }}
-                        viewport={{ once: true }}
-                      >
-
-                      {/* Fase 2 */}
-                      <div className="pl-6 relative">
-                        <div className="absolute left-[-14px] top-1 w-4 h-4 bg-emerald-400 rounded-full"></div>
-                        <h4 className="text-xl font-semibold text-white">2. La strategia: dalla coscienza all’azione</h4>
-                        <p className="text-gray-300">Posizionamento, mindset strategico, bio professionale e piano d’azione personalizzato.</p>
-                      </div>
-
-                      </motion.div>
-
-                      <motion.div
-                        initial={{ opacity: 0, y: 40 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.4, delay: 0.2 }}
-                        viewport={{ once: true }}
-                      >
-
-                      {/* Fase 3 */}
-                      <div className="pl-6 relative">
-                        <div className="absolute left-[-14px] top-1 w-4 h-4 bg-emerald-400 rounded-full"></div>
-                        <h4 className="text-xl font-semibold text-white">3. Costruisci e differenziati</h4>
-                        <p className="text-gray-300">Routine produttiva, strategia personale, verticalità e impatto reale sul tuo mercato.</p>
-                      </div>
-
-                      </motion.div>
-
-                      <motion.div
-                        initial={{ opacity: 0, y: 40 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.4, delay: 0.2 }}
-                        viewport={{ once: true }}
-                      >
-
-                      {/* Fase 4 */}
-                      <div className="pl-6 relative">
-                        <div className="absolute left-[-14px] top-1 w-4 h-4 bg-emerald-400 rounded-full"></div>
-                        <h4 className="text-xl font-semibold text-white">4. Analizza, ottimizza e scala</h4>
-                        <p className="text-gray-300">KPI, miglioramento continuo e creazione di un sistema sostenibile di crescita.</p>
-                      </div>
-
-                      </motion.div>
-
-                      <motion.div
-                        initial={{ opacity: 0, y: 40 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.4, delay: 0.2 }}
-                        viewport={{ once: true }}
-                      >
-
-                      {/* Fase 5 */}
-                      <div className="pl-6 relative">
-                        <div className="absolute left-[-14px] top-1 w-4 h-4 bg-emerald-400 rounded-full"></div>
-                        <h4 className="text-xl font-semibold text-white">5. Realizza e valorizza il cambiamento</h4>
-                        <p className="text-gray-300">Consolidamento, piano di sviluppo personale, toolkit operativo e piena autonomia.</p>
-                      </div>
-
-                      </motion.div>
-
-                    </div>
+                  {/* Fase 1 */}
+                  <div className="pl-6 relative">
+                    <div className="absolute left-[-14px] top-1 w-4 h-4 bg-emerald-400 rounded-full"></div>
+                    <h4 className="text-xl font-semibold text-white">1. Sbatti la testa contro lo specchio™</h4>
+                    <p className="text-gray-300">Consapevolezza, verità, roadmap iniziale — test diagnostici e mappatura punti ciechi.</p>
                   </div>
-                </section>
 
-               <div className="bg-white text-black p-6 md:p-8 rounded-xl shadow-xl space-y-8 text-left max-w-xl mx-auto">
+                </motion.div>
 
-                {/* A chi è rivolto */}
-                <div className="flex items-center gap-4">
-                  <div className="min-w-[2rem] flex justify-center items-center">
-                    <Target className="text-emerald-500 w-7 h-7" />
+                <motion.div
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.2 }}
+                  viewport={{ once: true }}
+                >
+
+                  {/* Fase 2 */}
+                  <div className="pl-6 relative">
+                    <div className="absolute left-[-14px] top-1 w-4 h-4 bg-emerald-400 rounded-full"></div>
+                    <h4 className="text-xl font-semibold text-white">2. La strategia: dalla coscienza all’azione</h4>
+                    <p className="text-gray-300">Posizionamento, mindset strategico, bio professionale e piano d’azione personalizzato.</p>
                   </div>
-                  <p className="text-base md:text-lg leading-relaxed">
-                    <strong>A chi è rivolto:</strong> terapisti, operatori del benessere e professionisti olistici che vogliono <span className="underline underline-offset-4">posizionarsi con autenticità</span> e ottenere risultati reali.
-                  </p>
-                </div>
 
-                {/* Include */}
-                <div className="flex items-center gap-4">
-                  <div className="min-w-[2rem] flex justify-center items-center">
-                    <ClipboardList className="text-emerald-500 w-7 h-7" />
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.2 }}
+                  viewport={{ once: true }}
+                >
+
+                  {/* Fase 3 */}
+                  <div className="pl-6 relative">
+                    <div className="absolute left-[-14px] top-1 w-4 h-4 bg-emerald-400 rounded-full"></div>
+                    <h4 className="text-xl font-semibold text-white">3. Costruisci e differenziati</h4>
+                    <p className="text-gray-300">Routine produttiva, strategia personale, verticalità e impatto reale sul tuo mercato.</p>
                   </div>
-                  <p className="text-base md:text-lg leading-relaxed">
-                    <strong>Include:</strong> 12 sessioni 1:1, strumenti pratici, supporto WhatsApp, test iniziali e materiali personalizzati.
-                  </p>
-                </div>
 
-                {/* Investimento */}
-                <div className="flex items-center gap-4">
-                  <div className="min-w-[2rem] flex justify-center items-center">
-                    <Wallet className="text-emerald-500 w-7 h-7" />
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.2 }}
+                  viewport={{ once: true }}
+                >
+
+                  {/* Fase 4 */}
+                  <div className="pl-6 relative">
+                    <div className="absolute left-[-14px] top-1 w-4 h-4 bg-emerald-400 rounded-full"></div>
+                    <h4 className="text-xl font-semibold text-white">4. Analizza, ottimizza e scala</h4>
+                    <p className="text-gray-300">KPI, miglioramento continuo e creazione di un sistema sostenibile di crescita.</p>
                   </div>
-                  <p className="text-base md:text-lg leading-relaxed">
-                    <strong>Investimento:</strong> <span className="font-semibold">880€</span> (2 tranche da 440€)
-                  </p>
-                </div>
 
-                {/* CTA */}
-                <div className="text-center pt-4">
-                  <a
-                    href="https://wa.me/3489841408"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-black font-semibold px-8 py-3 rounded-full shadow-lg hover:scale-105 transition-all duration-300"
-                  >
-                    <PhoneCall className="w-5 h-5" />
-                    Richiedi una Call Gratuita
-                  </a>
-                </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.2 }}
+                  viewport={{ once: true }}
+                >
+
+                  {/* Fase 5 */}
+                  <div className="pl-6 relative">
+                    <div className="absolute left-[-14px] top-1 w-4 h-4 bg-emerald-400 rounded-full"></div>
+                    <h4 className="text-xl font-semibold text-white">5. Realizza e valorizza il cambiamento</h4>
+                    <p className="text-gray-300">Consolidamento, piano di sviluppo personale, toolkit operativo e piena autonomia.</p>
+                  </div>
+
+                </motion.div>
+
               </div>
+            </div>
+          </section>
+
+          <div className="bg-white text-black p-6 md:p-8 rounded-xl shadow-xl space-y-8 text-left max-w-xl mx-auto">
+
+            {/* A chi è rivolto */}
+            <div className="flex items-center gap-4">
+              <div className="min-w-[2rem] flex justify-center items-center">
+                <Target className="text-emerald-500 w-7 h-7" />
+              </div>
+              <p className="text-base md:text-lg leading-relaxed">
+                <strong>A chi è rivolto:</strong> terapisti, operatori del benessere e professionisti olistici che vogliono <span className="underline underline-offset-4">posizionarsi con autenticità</span> e ottenere risultati reali.
+              </p>
+            </div>
+
+            {/* Include */}
+            <div className="flex items-center gap-4">
+              <div className="min-w-[2rem] flex justify-center items-center">
+                <ClipboardList className="text-emerald-500 w-7 h-7" />
+              </div>
+              <p className="text-base md:text-lg leading-relaxed">
+                <strong>Include:</strong> 12 sessioni 1:1, strumenti pratici, supporto WhatsApp, test iniziali e materiali personalizzati.
+              </p>
+            </div>
+
+            {/* Investimento */}
+            <div className="flex items-center gap-4">
+              <div className="min-w-[2rem] flex justify-center items-center">
+                <Wallet className="text-emerald-500 w-7 h-7" />
+              </div>
+              <p className="text-base md:text-lg leading-relaxed">
+                <strong>Investimento:</strong> <span className="font-semibold">880€</span> (2 tranche da 440€)
+              </p>
+            </div>
+
+            {/* CTA */}
+            <div className="text-center pt-4">
+              <a
+                href="https://wa.me/3489841408"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-black font-semibold px-8 py-3 rounded-full shadow-lg hover:scale-105 transition-all duration-300"
+              >
+                <PhoneCall className="w-5 h-5" />
+                Richiedi una Call Gratuita
+              </a>
+            </div>
+          </div>
 
 
 
         </div>
       </section>
-      
+
       {/* TESTIMONIANZE */}
       <section id="testimonianze" className="bg-black py-20 px-6">
         <div className="max-w-6xl mx-auto">
@@ -225,71 +269,71 @@ export default function Home() {
           <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-2">
 
             <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-              >
-            
-            {/* Testimonianza 1 */}
-            <div className="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-800 hover:scale-[1.02] transition duration-300 ease-out">
-              <div className="flex items-center gap-4 mb-4">
-                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente 1" className="w-14 h-14 rounded-full object-cover" />
-                <div>
-                  <h4 className="text-lg font-semibold text-white">Chiara R.</h4>
-                  <p className="text-sm text-gray-400">Estetista professionale</p>
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+
+              {/* Testimonianza 1 */}
+              <div className="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-800 hover:scale-[1.02] transition duration-300 ease-out">
+                <div className="flex items-center gap-4 mb-4">
+                  <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente 1" className="w-14 h-14 rounded-full object-cover" />
+                  <div>
+                    <h4 className="text-lg font-semibold text-white">Chiara R.</h4>
+                    <p className="text-sm text-gray-400">Estetista professionale</p>
+                  </div>
                 </div>
+                <p className="text-gray-300 italic">
+                  “Il percorso con Gianluigi è stato una svolta. Ho capito chi sono, cosa voglio e ho finalmente una strategia concreta.”
+                </p>
               </div>
-              <p className="text-gray-300 italic">
-                “Il percorso con Gianluigi è stato una svolta. Ho capito chi sono, cosa voglio e ho finalmente una strategia concreta.”
-              </p>
-            </div>
 
             </motion.div>
 
             <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-              >
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
 
-            {/* Testimonianza 2 */}
-            <div className="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-800 hover:scale-[1.02] transition duration-300 ease-out">
-              <div className="flex items-center gap-4 mb-4">
-                <img src="https://randomuser.me/api/portraits/men/36.jpg" alt="Cliente 2" className="w-14 h-14 rounded-full object-cover" />
-                <div>
-                  <h4 className="text-lg font-semibold text-white">Luca M.</h4>
-                  <p className="text-sm text-gray-400">Massoterapista</p>
+              {/* Testimonianza 2 */}
+              <div className="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-800 hover:scale-[1.02] transition duration-300 ease-out">
+                <div className="flex items-center gap-4 mb-4">
+                  <img src="https://randomuser.me/api/portraits/men/36.jpg" alt="Cliente 2" className="w-14 h-14 rounded-full object-cover" />
+                  <div>
+                    <h4 className="text-lg font-semibold text-white">Luca M.</h4>
+                    <p className="text-sm text-gray-400">Massoterapista</p>
+                  </div>
                 </div>
+                <p className="text-gray-300 italic">
+                  “Mi sono smarcato dal ‘faccio tutto per tutti’. Ora lavoro solo con i clienti giusti, e guadagno di più con meno stress.”
+                </p>
               </div>
-              <p className="text-gray-300 italic">
-                “Mi sono smarcato dal ‘faccio tutto per tutti’. Ora lavoro solo con i clienti giusti, e guadagno di più con meno stress.”
-              </p>
-            </div>
 
             </motion.div>
 
             <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-              >
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
 
-            {/* Testimonianza 3 */}
-            <div className="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-800 hover:scale-[1.02] transition duration-300 ease-out">
-              <div className="flex items-center gap-4 mb-4">
-                <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="Cliente 3" className="w-14 h-14 rounded-full object-cover" />
-                <div>
-                  <h4 className="text-lg font-semibold text-white">Francesca D.</h4>
-                  <p className="text-sm text-gray-400">Coach Olistica</p>
+              {/* Testimonianza 3 */}
+              <div className="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-800 hover:scale-[1.02] transition duration-300 ease-out">
+                <div className="flex items-center gap-4 mb-4">
+                  <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="Cliente 3" className="w-14 h-14 rounded-full object-cover" />
+                  <div>
+                    <h4 className="text-lg font-semibold text-white">Francesca D.</h4>
+                    <p className="text-sm text-gray-400">Coach Olistica</p>
+                  </div>
                 </div>
+                <p className="text-gray-300 italic">
+                  “Gianluigi ha un dono: ti aiuta a vedere quello che non vedi. Ho ricostruito la mia offerta da zero, con autenticità.”
+                </p>
               </div>
-              <p className="text-gray-300 italic">
-                “Gianluigi ha un dono: ti aiuta a vedere quello che non vedi. Ho ricostruito la mia offerta da zero, con autenticità.”
-              </p>
-            </div>
 
             </motion.div>
 
@@ -297,7 +341,7 @@ export default function Home() {
         </div>
       </section>
 
-     
+
 
 
 
@@ -315,17 +359,17 @@ export default function Home() {
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
-            
-            {/* FAQ 1 */}
-            <details className="group bg-gray-800 p-5 rounded-lg shadow-md border border-gray-700">
-              <summary className="cursor-pointer text-lg font-semibold text-white flex justify-between items-center">
-                Devo avere già un’attività avviata per accedere al percorso?
-                <span className="ml-4 text-emerald-400 group-open:rotate-180 transition-transform">&#9660;</span>
-              </summary>
-              <p className="mt-3 text-gray-300">
-                No, puoi iniziare anche se sei in fase di transizione o apertura. Il percorso ti aiuterà proprio a partire con consapevolezza e metodo.
-              </p>
-            </details>
+
+              {/* FAQ 1 */}
+              <details className="group bg-gray-800 p-5 rounded-lg shadow-md border border-gray-700">
+                <summary className="cursor-pointer text-lg font-semibold text-white flex justify-between items-center">
+                  Devo avere già un’attività avviata per accedere al percorso?
+                  <span className="ml-4 text-emerald-400 group-open:rotate-180 transition-transform">&#9660;</span>
+                </summary>
+                <p className="mt-3 text-gray-300">
+                  No, puoi iniziare anche se sei in fase di transizione o apertura. Il percorso ti aiuterà proprio a partire con consapevolezza e metodo.
+                </p>
+              </details>
 
             </motion.section>
 
@@ -336,16 +380,16 @@ export default function Home() {
               viewport={{ once: true }}
             >
 
-            {/* FAQ 2 */}
-            <details className="group bg-gray-800 p-5 rounded-lg shadow-md border border-gray-700">
-              <summary className="cursor-pointer text-lg font-semibold text-white flex justify-between items-center">
-                Posso pagare in due rate?
-                <span className="ml-4 text-emerald-400 group-open:rotate-180 transition-transform">&#9660;</span>
-              </summary>
-              <p className="mt-3 text-gray-300">
-                Sì, puoi versare 440€ all’inizio e i restanti 440€ dopo la seconda fase. Il pagamento può essere effettuato via bonifico o PayPal.
-              </p>
-            </details>
+              {/* FAQ 2 */}
+              <details className="group bg-gray-800 p-5 rounded-lg shadow-md border border-gray-700">
+                <summary className="cursor-pointer text-lg font-semibold text-white flex justify-between items-center">
+                  Posso pagare in due rate?
+                  <span className="ml-4 text-emerald-400 group-open:rotate-180 transition-transform">&#9660;</span>
+                </summary>
+                <p className="mt-3 text-gray-300">
+                  Sì, puoi versare 440€ all’inizio e i restanti 440€ dopo la seconda fase. Il pagamento può essere effettuato via bonifico o PayPal.
+                </p>
+              </details>
 
             </motion.section>
 
@@ -356,16 +400,16 @@ export default function Home() {
               viewport={{ once: true }}
             >
 
-            {/* FAQ 3 */}
-            <details className="group bg-gray-800 p-5 rounded-lg shadow-md border border-gray-700">
-              <summary className="cursor-pointer text-lg font-semibold text-white flex justify-between items-center">
-                Cosa succede se salto una sessione?
-                <span className="ml-4 text-emerald-400 group-open:rotate-180 transition-transform">&#9660;</span>
-              </summary>
-              <p className="mt-3 text-gray-300">
-                Nessun problema: possiamo riprogrammarla entro 10 giorni. La flessibilità fa parte del mio metodo.
-              </p>
-            </details>
+              {/* FAQ 3 */}
+              <details className="group bg-gray-800 p-5 rounded-lg shadow-md border border-gray-700">
+                <summary className="cursor-pointer text-lg font-semibold text-white flex justify-between items-center">
+                  Cosa succede se salto una sessione?
+                  <span className="ml-4 text-emerald-400 group-open:rotate-180 transition-transform">&#9660;</span>
+                </summary>
+                <p className="mt-3 text-gray-300">
+                  Nessun problema: possiamo riprogrammarla entro 10 giorni. La flessibilità fa parte del mio metodo.
+                </p>
+              </details>
 
             </motion.section>
 
@@ -395,7 +439,7 @@ export default function Home() {
             {/* Video 1 */}
             <div className="aspect-w-16 aspect-h-9">
               <iframe
-                src="https://www.youtube.com/embed/nTbx_ynapZg" 
+                src="https://www.youtube.com/embed/nTbx_ynapZg"
                 title="Video 1"
                 className="w-full h-full rounded-lg"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -406,7 +450,7 @@ export default function Home() {
             {/* Video 2 */}
             <div className="aspect-w-16 aspect-h-9">
               <iframe
-                src="https://www.youtube.com/embed/dlxFpYoP-hk" 
+                src="https://www.youtube.com/embed/dlxFpYoP-hk"
                 title="Video 2"
                 className="w-full h-full rounded-lg"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -417,7 +461,7 @@ export default function Home() {
             {/* Video 3 */}
             <div className="aspect-w-16 aspect-h-9">
               <iframe
-                src="https://www.youtube.com/embed/2m78egHsUJM" 
+                src="https://www.youtube.com/embed/2m78egHsUJM"
                 title="Video 3"
                 className="w-full h-full rounded-lg"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -435,14 +479,14 @@ export default function Home() {
           >
 
 
-          <a
-            href="https://wa.me/3489841408?text=Ciao%20Gianluigi%2C%20ho%20visto%20il%20video%20e%20voglio%20saperne%20di%20pi%C3%B9%20sul%20percorso%20evolutivo." 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-12 inline-block bg-emerald-500 text-black px-8 py-3 rounded-full text-lg font-semibold hover:scale-105 transition"
-          >
-            Scrivimi su WhatsApp
-          </a>
+            <a
+              href="https://wa.me/3489841408?text=Ciao%20Gianluigi%2C%20ho%20visto%20il%20video%20e%20voglio%20saperne%20di%20pi%C3%B9%20sul%20percorso%20evolutivo."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-12 inline-block bg-emerald-500 text-black px-8 py-3 rounded-full text-lg font-semibold hover:scale-105 transition"
+            >
+              Scrivimi su WhatsApp
+            </a>
 
           </motion.a>
         </div>
@@ -511,7 +555,7 @@ export default function Home() {
           <p className="text-base font-semibold text-white mb-4">Seguimi sui social</p>
           <div className="flex justify-center space-x-6 text-2xl">
             <a
-              href="https://www.instagram.com/i.m.gigi_" 
+              href="https://www.instagram.com/i.m.gigi_"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-emerald-400 transition"
@@ -519,7 +563,7 @@ export default function Home() {
               <FaInstagram />
             </a>
             <a
-              href="https://www.linkedin.com/in/gianluigi-merisio-22a04912b" 
+              href="https://www.linkedin.com/in/gianluigi-merisio-22a04912b"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-emerald-400 transition"
@@ -527,7 +571,7 @@ export default function Home() {
               <FaLinkedin />
             </a>
             <a
-              href="https://www.youtube.com/@i.m.Gigi_" 
+              href="https://www.youtube.com/@i.m.Gigi_"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-emerald-400 transition"
