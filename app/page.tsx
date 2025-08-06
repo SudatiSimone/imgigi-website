@@ -18,43 +18,66 @@ export default function Home() {
       {/* HERO */}
       <section
         id="hero"
-        className="relative bg-gradient-to-br from-gray-900 to-black text-white overflow-hidden pt-10 md:pt-16 pb-16 px-4 sm:px-6 md:px-12 xl:px-24"
+        className="relative bg-gradient-to-br from-gray-900 to-black text-white overflow-hidden pt-5 md:pt-16 pb-16 px-4 sm:px-6 md:px-12 xl:px-24"
       >
-        {/* Layout desktop */}
-        <div className="hidden md:grid max-w-7xl mx-auto grid-cols-1 md:grid-cols-2 items-center gap-12">
-          {/* Testo Hero */}
-          <div className="relative z-10 text-left space-y-6">
-            <h1 className="text-4xl md:text-5xl xl:text-6xl font-extrabold leading-tight">
-              Diventa un <br />
-              Professionista Consapevole
-            </h1>
-            <p className="text-lg md:text-xl text-gray-300">
-              Percorsi per operatori olistici e del benessere che vogliono distinguersi e crescere davvero.
-            </p>
-            <a
-              href="#percorso"
-              className="inline-block mt-2 px-8 py-3 bg-emerald-500 text-black font-semibold rounded-full shadow-lg hover:scale-105 transition duration-300"
-            >
-              Scopri il percorso
-            </a>
-          </div>
+      {/* Layout desktop */}
+      <div className="hidden md:grid max-w-7xl mx-auto grid-cols-1 md:grid-cols-2 items-center gap-12">
+        
+        {/* Testo Hero con animazione slide-in da sinistra */}
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          className="relative z-10 text-left space-y-6"
+        >
+          <h1 className="text-4xl md:text-5xl xl:text-6xl font-extrabold leading-tight">
+            Diventa un <br />
+            Professionista Consapevole
+          </h1>
+          <p className="text-lg md:text-xl text-gray-300">
+            Percorsi per operatori olistici e del benessere che vogliono distinguersi e crescere davvero.
+          </p>
+          <motion.a
+            href="#percorso"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="inline-block mt-2 px-8 py-3 bg-emerald-500 text-black font-semibold rounded-full shadow-lg hover:scale-105 transition duration-300"
+          >
+            Scopri il percorso
+          </motion.a>
+        </motion.div>
 
-          {/* Immagine desktop */}
-          <div className="relative flex justify-center md:justify-end z-0">
-            <img
-              src="/hero.jpg"
-              alt="Gianluigi Merisio"
-              className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl object-contain opacity-95"
-            />
-          </div>
-        </div>
+        {/* Immagine desktop con fade-in leggero e zoom-in */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2, delay: 0.3 }}
+          className="relative flex justify-center md:justify-end z-0"
+        >
+          <img
+            src="/hero.jpg"
+            alt="Gianluigi Merisio"
+            className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl object-contain opacity-95"
+          />
+        </motion.div>
+      </div>
+
 
 
       {/* MOBILE HERO - solo su mobile */}
-      <div className="relative flex flex-col items-center text-center md:hidden px-4 pt-6 pb-16 bg-gradient-to-br from-gray-900 to-black text-white">
-        
-        {/* Immagine con sfumatura e margine basso ridotto */}
-        <div className="w-72 relative -mb-12 z-10">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="relative flex flex-col items-center text-center md:hidden px-4 pt-0 pb-16 bg-gradient-to-br from-gray-900 to-black text-white"
+      >
+        {/* Immagine con sfumatura rialzata */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 0.2 }}
+          className="w-72 relative -mb-14 z-10"
+        >
           <img
             src="/hero.jpg"
             alt="Gianluigi Merisio"
@@ -64,10 +87,15 @@ export default function Home() {
               WebkitMaskImage: 'linear-gradient(to bottom, black 60%, rgba(0, 0, 0, 0.4) 85%, transparent 100%)',
             }}
           />
-        </div>
+        </motion.div>
 
-        {/* Testo sovrapposto alla sfumatura */}
-        <div className="relative z-20 mt-2 space-y-4">
+        {/* Testo sovrapposto */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.4 }}
+          className="relative z-20 mt-2 space-y-4"
+        >
           <h1 className="text-3xl font-extrabold leading-snug">
             Diventa un <br />
             Professionista Consapevole
@@ -75,14 +103,17 @@ export default function Home() {
           <p className="text-base text-gray-300">
             Percorsi per operatori olistici e del benessere che vogliono distinguersi e crescere davvero.
           </p>
-          <a
+          <motion.a
             href="#percorso"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             className="inline-block mt-2 px-6 py-3 bg-emerald-500 text-black font-semibold rounded-full shadow hover:scale-105 transition"
           >
             Scopri il percorso
-          </a>
-        </div>
-      </div>
+          </motion.a>
+        </motion.div>
+      </motion.div>
+
 
       </section>
 
