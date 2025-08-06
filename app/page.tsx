@@ -5,6 +5,7 @@ import Header from '../Components/Header'
 import SocialSidebar from '../Components/SocialSidebar'
 import { Target, ClipboardList, Wallet, PhoneCall } from 'lucide-react'
 
+import FaqItem from '../Components/FaqItem'
 
 import { FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa'
 import { motion } from "framer-motion"
@@ -383,65 +384,41 @@ export default function Home() {
 
           <div className="space-y-6">
 
-            <motion.section
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-            >
+              <motion.section
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <FaqItem
+                  question="Devo avere già un’attività avviata per accedere al percorso?"
+                  answer="No, puoi iniziare anche se sei in fase di transizione o apertura. Il percorso ti aiuterà proprio a partire con consapevolezza e metodo."
+                />
+              </motion.section>
 
-              {/* FAQ 1 */}
-              <details className="group bg-gray-800 p-5 rounded-lg shadow-md border border-gray-700">
-                <summary className="cursor-pointer text-lg font-semibold text-white flex justify-between items-center">
-                  Devo avere già un’attività avviata per accedere al percorso?
-                  <span className="ml-4 text-emerald-400 group-open:rotate-180 transition-transform">&#9660;</span>
-                </summary>
-                <p className="mt-3 text-gray-300">
-                  No, puoi iniziare anche se sei in fase di transizione o apertura. Il percorso ti aiuterà proprio a partire con consapevolezza e metodo.
-                </p>
-              </details>
+              <motion.section
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <FaqItem
+                  question="Posso pagare in due rate?"
+                  answer="Sì, puoi versare 440€ all’inizio e i restanti 440€ dopo la seconda fase. Il pagamento può essere effettuato via bonifico o PayPal."
+                />
+              </motion.section>
 
-            </motion.section>
-
-            <motion.section
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-            >
-
-              {/* FAQ 2 */}
-              <details className="group bg-gray-800 p-5 rounded-lg shadow-md border border-gray-700">
-                <summary className="cursor-pointer text-lg font-semibold text-white flex justify-between items-center">
-                  Posso pagare in due rate?
-                  <span className="ml-4 text-emerald-400 group-open:rotate-180 transition-transform">&#9660;</span>
-                </summary>
-                <p className="mt-3 text-gray-300">
-                  Sì, puoi versare 440€ all’inizio e i restanti 440€ dopo la seconda fase. Il pagamento può essere effettuato via bonifico o PayPal.
-                </p>
-              </details>
-
-            </motion.section>
-
-            <motion.section
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-            >
-
-              {/* FAQ 3 */}
-              <details className="group bg-gray-800 p-5 rounded-lg shadow-md border border-gray-700">
-                <summary className="cursor-pointer text-lg font-semibold text-white flex justify-between items-center">
-                  Cosa succede se salto una sessione?
-                  <span className="ml-4 text-emerald-400 group-open:rotate-180 transition-transform">&#9660;</span>
-                </summary>
-                <p className="mt-3 text-gray-300">
-                  Nessun problema: possiamo riprogrammarla entro 10 giorni. La flessibilità fa parte del mio metodo.
-                </p>
-              </details>
-
-            </motion.section>
+              <motion.section
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <FaqItem
+                  question="Cosa succede se salto una sessione?"
+                  answer="Nessun problema: possiamo riprogrammarla entro 10 giorni. La flessibilità fa parte del mio metodo."
+                />
+              </motion.section>
 
           </div>
         </div>
