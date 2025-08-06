@@ -118,34 +118,6 @@ export default function Home() {
       </section>
 
 
-
-      {/* CHI SONO */}
-      <section id="chi-sono" className="max-w-4xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center gap-10">
-
-        <img
-          src="/fotoprofilo.jpg"
-          alt="Foto di Merisio Gianluigi"
-          className="w-48 h-48 rounded-full object-cover shadow-lg"
-        />
-
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <div>
-            <h2 className="text-3xl font-bold mb-4">Merisio Gianluigi</h2>
-            <p className="text-gray-300 text-lg leading-relaxed">
-              Professionista con eccellenti competenze tecniche e manageriali, maturate in molti anni nel settore delle vendite e del beauty.
-              Mi distinguo per leadership, pianificazione strategica e capacità di aiutare aziende e persone a raggiungere risultati concreti.
-              Amo costruire relazioni autentiche, stimolare il cambiamento e accompagnare professionisti nella loro evoluzione.
-            </p>
-          </div>
-
-        </motion.div>
-      </section>
-
       {/* PERCORSO */}
       <section id="percorso" className="bg-gray-900 py-20 px-6 md:px-12 xl:px-24">
         <div className="max-w-5xl mx-auto">
@@ -289,6 +261,33 @@ export default function Home() {
 
 
 
+        </div>
+      </section>
+
+      {/* ABOUT M2E */}
+      <section id="about" className="max-w-4xl mx-auto px-6 py-20">
+        <h2 className="text-3xl font-bold mb-8 text-center">About M2e</h2>
+        <div className="flex flex-col md:flex-row items-center gap-10">
+          <img
+            src="/fotoprofilo.jpg"
+            alt="Foto di Merisio Gianluigi"
+            className="w-48 h-48 rounded-full object-cover shadow-lg"
+          />
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <div>
+              <h3 className="text-2xl font-bold mb-4">Merisio Gianluigi</h3>
+              <p className="text-gray-300 text-lg leading-relaxed">
+                Professionista con eccellenti competenze tecniche e manageriali, maturate in molti anni nel settore delle vendite e del beauty.
+                Mi distinguo per leadership, pianificazione strategica e capacità di aiutare aziende e persone a raggiungere risultati concreti.
+                Amo costruire relazioni autentiche, stimolare il cambiamento e accompagnare professionisti nella loro evoluzione.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </section>
 

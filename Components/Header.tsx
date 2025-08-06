@@ -13,8 +13,8 @@ export default function Header() {
         {/* Desktop Menu */}
         <nav className="hidden md:flex space-x-8 text-base">
           <a href="#hero" className="hover:text-emerald-400">Home</a>
-          <a href="#chi-sono" className="hover:text-emerald-400">Chi sono</a>
           <a href="#percorso" className="hover:text-emerald-400">Percorso</a>
+          <a href="#about" className="hover:text-emerald-400">About M2e</a>
           <a href="#contatti" className="hover:text-emerald-400">Contatti</a>
         </nav>
 
@@ -31,8 +31,8 @@ export default function Header() {
       {isOpen && (
         <div className="md:hidden bg-black bg-opacity-90 px-6 pb-4 space-y-4 text-base">
           <a href="#hero" className="block hover:text-emerald-400">Home</a>
-          <a href="#chi-sono" className="block hover:text-emerald-400">Chi sono</a>
           <a href="#percorso" className="block hover:text-emerald-400">Percorso</a>
+          <a href="#about" className="block hover:text-emerald-400">About M2e</a>
           <a href="#contatti" className="block hover:text-emerald-400">Contatti</a>
         </div>
       )}
