@@ -266,7 +266,7 @@ export default function Home() {
 
       {/* ABOUT M2E */}
       <section id="about" className="max-w-4xl mx-auto px-6 py-20">
-        <h2 className="text-3xl font-bold mb-8 text-center">About M2e</h2>
+        <h2 className="text-3xl font-bold mb-8 text-center">About Me</h2>
         <div className="flex flex-col md:flex-row items-center gap-10">
           <img
             src="/fotoprofilo.jpg"

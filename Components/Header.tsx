@@ -32,7 +32,7 @@ export default function Header() {
         <div className="md:hidden bg-black bg-opacity-90 px-6 pb-4 space-y-4 text-base">
           <a href="#hero" className="block hover:text-emerald-400">Home</a>
           <a href="#percorso" className="block hover:text-emerald-400">Percorso</a>
-          <a href="#about" className="block hover:text-emerald-400">About M2e</a>
+          <a href="#about" className="block hover:text-emerald-400">About Me</a>
           <a href="#contatti" className="block hover:text-emerald-400">Contatti</a>
         </div>
       )}
