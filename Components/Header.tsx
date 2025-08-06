@@ -14,7 +14,7 @@ export default function Header() {
         <nav className="hidden md:flex space-x-8 text-base">
           <a href="#hero" className="hover:text-emerald-400">Home</a>
           <a href="#percorso" className="hover:text-emerald-400">Percorso</a>
-          <a href="#about" className="hover:text-emerald-400">About M2e</a>
+          <a href="#about" className="hover:text-emerald-400">About Me</a>
           <a href="#contatti" className="hover:text-emerald-400">Contatti</a>
         </nav>
 
