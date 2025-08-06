@@ -3,7 +3,6 @@
 import Header from '../Components/Header'
 
 import SocialSidebar from '../Components/SocialSidebar'
-import { Target, Toolbox, Wallet, PhoneCall } from 'lucide-react'
 
 
 import { FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa'
