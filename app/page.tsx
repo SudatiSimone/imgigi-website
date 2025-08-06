@@ -33,7 +33,7 @@ export default function Home() {
         >
           <h1 className="text-4xl md:text-5xl xl:text-6xl font-extrabold leading-tight">
             Diventa un <br />
-            Terapista D'Elite
+            Terapista D&apos;Elite
           </h1>
           <p className="text-lg md:text-xl text-gray-300">
             Percorsi per operatori olistici e del benessere che vogliono distinguersi e crescere davvero.
