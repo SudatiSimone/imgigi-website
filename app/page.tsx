@@ -3,6 +3,7 @@
 import Header from '../Components/Header'
 
 import SocialSidebar from '../Components/SocialSidebar'
+import { Target, Toolbox, Wallet, PhoneCall } from 'lucide-react'
 
 
 import { FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa'
@@ -17,14 +18,14 @@ export default function Home() {
       {/* HERO */}
       <section id="hero" className="text-center py-20 px-6 bg-gradient-to-br from-gray-900 to-black">
 
-        <motion.h1
-          initial={{ opacity: 0, y: 40 }}
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 1, ease: 'easeOut' }}
           className="text-4xl md:text-6xl font-extrabold text-white text-center"
         >
           Diventa un Professionista Consapevole
-        </motion.h1>
+        </motion.p>
 
 
         <motion.p
@@ -91,7 +92,7 @@ export default function Home() {
                       {/* Fase 1 */}
                       <div className="pl-6 relative">
                         <div className="absolute left-[-14px] top-1 w-4 h-4 bg-emerald-400 rounded-full"></div>
-                        <h4 className="text-xl font-semibold text-white">1. Sbatta la testa contro lo specchio™</h4>
+                        <h4 className="text-xl font-semibold text-white">1. Sbatti la testa contro lo specchio™</h4>
                         <p className="text-gray-300">Consapevolezza, verità, roadmap iniziale — test diagnostici e mappatura punti ciechi.</p>
                       </div>
 
@@ -165,35 +166,34 @@ export default function Home() {
                   </div>
                 </section>
 
-          <div className="bg-white text-black p-6 rounded-xl shadow-lg space-y-6">
-            <p><strong>🎯 A chi è rivolto:</strong> terapisti, operatori del benessere e professionisti olistici che vogliono posizionarsi con autenticità e ottenere risultati reali.</p>
+            <div className="bg-white text-black p-6 md:p-8 rounded-xl shadow-xl space-y-6 text-left max-w-xl mx-auto">
 
-            <div>
-              <h3 className="text-xl font-semibold">🔥 Le 5 Fasi:</h3>
-              <ul className="list-disc pl-6 mt-2 space-y-1">
-                <li><strong>Fase 1:</strong> Consapevolezza e roadmap personalizzata</li>
-                <li><strong>Fase 2:</strong> Mindset e piano d’azione strategico</li>
-                <li><strong>Fase 3:</strong> Differenziazione e impatto</li>
-                <li><strong>Fase 4:</strong> Ottimizzazione e scalabilità</li>
-                <li><strong>Fase 5:</strong> Autonomia e valorizzazione</li>
-              </ul>
+              <p className="text-base md:text-lg leading-relaxed">
+                <strong>🎯 A chi è rivolto:</strong> terapisti, operatori del benessere e professionisti olistici che vogliono <span className="underline underline-offset-4">posizionarsi con autenticità</span> e ottenere risultati reali.
+              </p>
+
+              <div className="space-y-3">
+                <p className="text-base md:text-lg">
+                  <strong>🧰 Include:</strong> 12 sessioni 1:1, strumenti pratici, supporto WhatsApp, test iniziali e materiali personalizzati.
+                </p>
+                <p className="text-base md:text-lg">
+                  <strong>💸 Investimento:</strong> <span className="font-semibold">880€</span> (2 tranche da 440€)
+                </p>
+              </div>
+
+              <div className="text-center pt-4">
+                <a
+                  href="https://wa.me/3489841408"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-emerald-500 hover:bg-emerald-400 text-black font-semibold px-8 py-3 rounded-full shadow-lg hover:scale-105 transition-all duration-300"
+                >
+                  📞 Richiedi una Call Gratuita
+                </a>
+              </div>
             </div>
 
-            <div>
-              <p><strong>✔ Include:</strong> 12 sessioni 1:1, strumenti, supporto WhatsApp, test iniziali e materiali personalizzati</p>
-              <p><strong>💶 Investimento:</strong> 880€ (2 tranche da 440€)</p>
-            </div>
 
-            <div className="text-center pt-4">
-              <a
-                href="https://wa.me/3489841408" 
-                target="_blank"
-                className="bg-emerald-500 text-black px-6 py-3 rounded-full font-semibold hover:scale-105 transition"
-              >
-                Richiedi una Call Gratuita
-              </a>
-            </div>
-          </div>
         </div>
       </section>
       
@@ -212,7 +212,7 @@ export default function Home() {
               >
             
             {/* Testimonianza 1 */}
-            <div className="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-800">
+            <div className="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-800 hover:scale-[1.02] transition duration-300 ease-out">
               <div className="flex items-center gap-4 mb-4">
                 <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente 1" className="w-14 h-14 rounded-full object-cover" />
                 <div>
@@ -235,7 +235,7 @@ export default function Home() {
               >
 
             {/* Testimonianza 2 */}
-            <div className="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-800">
+            <div className="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-800 hover:scale-[1.02] transition duration-300 ease-out">
               <div className="flex items-center gap-4 mb-4">
                 <img src="https://randomuser.me/api/portraits/men/36.jpg" alt="Cliente 2" className="w-14 h-14 rounded-full object-cover" />
                 <div>
@@ -258,7 +258,7 @@ export default function Home() {
               >
 
             {/* Testimonianza 3 */}
-            <div className="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-800">
+            <div className="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-800 hover:scale-[1.02] transition duration-300 ease-out">
               <div className="flex items-center gap-4 mb-4">
                 <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="Cliente 3" className="w-14 h-14 rounded-full object-cover" />
                 <div>
@@ -276,6 +276,23 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* FORM */}
+      <section className="bg-black text-white text-center py-20 px-6">
+         <h2 className="text-3xl md:text-4xl font-serif mb-6">Sei pronta a dare forma al tuo percorso?</h2>
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+             Ti accompagno passo dopo passo con metodo, strategia e autenticità. Iniziamo con una call gratuita.
+          </p>
+        <a
+          href="#contatti"
+          className="inline-block px-8 py-3 bg-emerald-500 text-black font-semibold rounded-full hover:scale-105 transition"
+        >
+          Scrivimi o prenota una call
+        </a>
+      </section>
+
+
+
 
       {/* FAQ */}
       <section id="faq" className="bg-gray-900 py-20 px-6">
@@ -424,11 +441,90 @@ export default function Home() {
       </section>
 
       {/* CONTATTI */}
-      <section id="contatti" className="py-16 px-6 text-center">
-        <h2 className="text-3xl font-bold mb-4">Contattami</h2>
-        <p className="mb-6 text-gray-300">Scrivimi su WhatsApp o prenota una call per capire se il percorso fa per te.</p>
-        <a href="mailto:gigi97.38@gmail.com" className="underline hover:text-emerald-400">gigi97.38@gmail.com</a>
+      <section id="contatti" className="bg-black text-brand-light py-24 px-6">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Contattami
+          </h2>
+          <p className="text-lg text-gray-400 mb-12">
+            Vuoi iniziare il percorso o ricevere più informazioni? Compila il modulo qui sotto e ti ricontatterò al più presto.
+          </p>
+
+          <form
+            action="https://formspree.io/f/{TUO-CODICE}" // 🔁 sostituisci con il tuo codice formspree
+            method="POST"
+            className="grid gap-6 text-left"
+          >
+            {/* Nome */}
+            <div>
+              <label htmlFor="nome" className="block text-sm text-gray-300 mb-2">
+                Nome
+              </label>
+              <input
+                type="text"
+                name="nome"
+                id="nome"
+                required
+                placeholder="Il tuo nome"
+                className="w-full px-4 py-3 rounded-md bg-brand-gray border border-brand-dark text-white focus:outline-none focus:ring-2 focus:ring-brand-accent transition"
+              />
+            </div>
+
+            {/* Email */}
+            <div>
+              <label htmlFor="email" className="block text-sm text-gray-300 mb-2">
+                Email
+              </label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                required
+                placeholder="tu@email.com"
+                className="w-full px-4 py-3 rounded-md bg-brand-gray border border-brand-dark text-white focus:outline-none focus:ring-2 focus:ring-brand-accent transition"
+              />
+            </div>
+
+            {/* Messaggio */}
+            <div>
+              <label htmlFor="messaggio" className="block text-sm text-gray-300 mb-2">
+                Messaggio
+              </label>
+              <textarea
+                name="messaggio"
+                id="messaggio"
+                rows={5}
+                required
+                placeholder="Scrivimi qui cosa ti interessa approfondire..."
+                className="w-full px-4 py-3 rounded-md bg-brand-gray border border-brand-dark text-white focus:outline-none focus:ring-2 focus:ring-brand-accent transition resize-none"
+              />
+            </div>
+
+            {/* Submit */}
+            <div className="text-center">
+              <button
+                type="submit"
+                className="inline-block bg-brand-accent text-black px-8 py-3 rounded-full font-semibold hover:bg-brand-accentLight transition"
+              >
+                Invia messaggio
+              </button>
+            </div>
+          </form>
+
+          {/* WhatsApp CTA */}
+          <div className="mt-10">
+            <a
+              href="https://wa.me/393420000000?text=Ciao%20Gianluigi,%20ti%20scrivo%20dal%20sito!"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-brand-accent hover:underline"
+            >
+              📱 Oppure scrivimi direttamente su WhatsApp
+            </a>
+          </div>
+        </div>
       </section>
+
 
       {/* FOOTER */}
       <footer className="bg-black border-t border-gray-800 py-10 text-center text-sm text-gray-400">
