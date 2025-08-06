@@ -147,13 +147,13 @@ export default function Home() {
       </section>
 
       {/* PERCORSO */}
-      <section id="percorso" className="bg-gray-900 py-20 px-6">
+      <section id="percorso" className="bg-gray-900 py-20 px-6 md:px-12 xl:px-24">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-center text-white">Percorso Strategico Evolutivo</h2>
 
           {/* TIMELINE DEL PERCORSO */}
           <section className="py-12">
-            <div className="max-w-5xl mx-auto px-6">
+            <div className="max-w-5xl mx-auto px-6 md:px-12 xl:px-24">
               <h3 className="text-2xl font-bold mb-8 text-center text-emerald-400">Le 5 Fasi del Percorso Strategico Evolutivo</h3>
               <div className="relative border-l border-gray-700 ml-4 space-y-10">
 
@@ -293,7 +293,7 @@ export default function Home() {
       </section>
 
       {/* TESTIMONIANZE */}
-      <section id="testimonianze" className="bg-black py-20 px-6">
+      <section id="testimonianze" className="bg-black py-20 px-6 md:px-12 xl:px-24">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12 text-white">Dicono di me</h2>
 
@@ -378,7 +378,7 @@ export default function Home() {
 
 
       {/* FAQ */}
-      <section id="faq" className="bg-gray-900 py-20 px-6">
+      <section id="faq" className="bg-gray-900 py-20 px-6 md:px-12 xl:px-24">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center text-white mb-12">Domande Frequenti</h2>
 
@@ -450,7 +450,7 @@ export default function Home() {
 
 
       {/* VIDEO + CTA WHATSAPP */}
-      <section id="video" className="bg-black py-20 px-6">
+      <section id="video" className="bg-black py-20 px-6 md:px-12 xl:px-24">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Guarda il video</h2>
           <p className="text-lg text-gray-300 mb-10">Chi sono, da dove parto e il mio percorso!</p>
@@ -525,7 +525,7 @@ export default function Home() {
 
       {/* CONTATTI */}
       {/* FORM */}
-      <section id="contatti" className="bg-black text-white py-24 px-6">
+      <section id="contatti" className="bg-black text-white py-24 px-6 md:px-12 xl:px-24">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-center mb-12 text-white">Contattami</h2>
           <p className="text-lg text-gray-400 mb-12">
