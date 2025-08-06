@@ -277,18 +277,60 @@ export default function Home() {
       </section>
 
       {/* FORM */}
-      <section className="bg-black text-white text-center py-20 px-6">
-         <h2 className="text-3xl md:text-4xl font-serif mb-6">Sei pronta a dare forma al tuo percorso?</h2>
-          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-             Ti accompagno passo dopo passo con metodo, strategia e autenticità. Iniziamo con una call gratuita.
+      <section id="contatti" className="bg-black text-white py-24 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-center mb-12 text-white">Contattami</h2>
+          <p className="text-lg text-gray-400 mb-12">
+            Scrivimi per richiedere una call gratuita o avere maggiori informazioni sul percorso.
           </p>
-        <a
-          href="#contatti"
-          className="inline-block px-8 py-3 bg-emerald-500 text-black font-semibold rounded-full hover:scale-105 transition"
-        >
-          Scrivimi o prenota una call
-        </a>
+
+          <form
+            action="https://formspree.io/f/YOUR_FORM_ID" // ⬅️ sostituisci con il tuo endpoint Formspree o simile
+            method="POST"
+            className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left"
+          >
+            <div className="col-span-1">
+              <label className="block mb-2 text-sm font-medium">Nome</label>
+              <input
+                type="text"
+                name="nome"
+                required
+                className="w-full px-4 py-3 rounded-md bg-gray-900 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              />
+            </div>
+
+            <div className="col-span-1">
+              <label className="block mb-2 text-sm font-medium">Email</label>
+              <input
+                type="email"
+                name="email"
+                required
+                className="w-full px-4 py-3 rounded-md bg-gray-900 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              />
+            </div>
+
+            <div className="col-span-1 md:col-span-2">
+              <label className="block mb-2 text-sm font-medium">Messaggio</label>
+              <textarea
+                name="messaggio"
+                rows={5}
+                required
+                className="w-full px-4 py-3 rounded-md bg-gray-900 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              />
+            </div>
+
+            <div className="col-span-1 md:col-span-2 text-center">
+              <button
+                type="submit"
+                className="mt-4 inline-block bg-emerald-500 hover:bg-emerald-400 text-black font-semibold px-8 py-3 rounded-full shadow-lg hover:scale-105 transition-all duration-300"
+              >
+                Invia Messaggio
+              </button>
+            </div>
+          </form>
+        </div>
       </section>
+
 
 
 
