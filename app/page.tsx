@@ -166,46 +166,51 @@ export default function Home() {
                   </div>
                 </section>
 
-          <div className="bg-white text-black p-6 md:p-8 rounded-xl shadow-xl space-y-8 text-left max-w-xl mx-auto">
+               <div className="bg-white text-black p-6 md:p-8 rounded-xl shadow-xl space-y-8 text-left max-w-xl mx-auto">
 
+                {/* A chi è rivolto */}
+                <div className="flex items-center gap-4">
+                  <div className="min-w-[2rem] flex justify-center items-center">
+                    <Target className="text-emerald-500 w-7 h-7" />
+                  </div>
+                  <p className="text-base md:text-lg leading-relaxed">
+                    <strong>A chi è rivolto:</strong> terapisti, operatori del benessere e professionisti olistici che vogliono <span className="underline underline-offset-4">posizionarsi con autenticità</span> e ottenere risultati reali.
+                  </p>
+                </div>
 
-          {/* A chi è rivolto */}
-          <div className="flex items-start gap-3">
-            <Target className="text-emerald-500 w-20 h-20 mt-0.3" />
-            <p className="text-base md:text-lg leading-relaxed">
-              <strong>A chi è rivolto:</strong> terapisti, operatori del benessere e professionisti olistici che vogliono <span className="underline underline-offset-4">posizionarsi con autenticità</span> e ottenere risultati reali.
-            </p>
-          </div>
+                {/* Include */}
+                <div className="flex items-center gap-4">
+                  <div className="min-w-[2rem] flex justify-center items-center">
+                    <ClipboardList className="text-emerald-500 w-7 h-7" />
+                  </div>
+                  <p className="text-base md:text-lg leading-relaxed">
+                    <strong>Include:</strong> 12 sessioni 1:1, strumenti pratici, supporto WhatsApp, test iniziali e materiali personalizzati.
+                  </p>
+                </div>
 
-          {/* Include */}
-          <div className="flex items-start gap-3">
-            <ClipboardList className="text-emerald-500 w-14 h-14 mt-0.3" />
-            <p className="text-base md:text-lg leading-relaxed">
-              <strong>Include:</strong> 12 sessioni 1:1, strumenti pratici, supporto WhatsApp, test iniziali e materiali personalizzati.
-            </p>
-          </div>
+                {/* Investimento */}
+                <div className="flex items-center gap-4">
+                  <div className="min-w-[2rem] flex justify-center items-center">
+                    <Wallet className="text-emerald-500 w-7 h-7" />
+                  </div>
+                  <p className="text-base md:text-lg leading-relaxed">
+                    <strong>Investimento:</strong> <span className="font-semibold">880€</span> (2 tranche da 440€)
+                  </p>
+                </div>
 
-          {/* Investimento */}
-          <div className="flex items-start gap-3">
-            <Wallet className="text-emerald-500 w-7 h-7 mt-1" />
-            <p className="text-base md:text-lg leading-relaxed">
-              <strong>Investimento:</strong> <span className="font-semibold">880€</span> (2 tranche da 440€)
-            </p>
-          </div>
-
-          {/* CTA */}
-          <div className="text-center pt-4">
-            <a
-              href="https://wa.me/3489841408"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-black font-semibold px-8 py-3 rounded-full shadow-lg hover:scale-105 transition-all duration-300"
-            >
-              <PhoneCall className="w-5 h-5" />
-              Richiedi una Call Gratuita
-            </a>
-          </div>
-        </div>
+                {/* CTA */}
+                <div className="text-center pt-4">
+                  <a
+                    href="https://wa.me/3489841408"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-black font-semibold px-8 py-3 rounded-full shadow-lg hover:scale-105 transition-all duration-300"
+                  >
+                    <PhoneCall className="w-5 h-5" />
+                    Richiedi una Call Gratuita
+                  </a>
+                </div>
+              </div>
 
 
 
