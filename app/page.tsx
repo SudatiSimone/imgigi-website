@@ -276,61 +276,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FORM */}
-      <section id="contatti" className="bg-black text-white py-24 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-center mb-12 text-white">Contattami</h2>
-          <p className="text-lg text-gray-400 mb-12">
-            Scrivimi per richiedere una call gratuita o avere maggiori informazioni sul percorso.
-          </p>
-
-          <form
-            action="https://formspree.io/f/YOUR_FORM_ID" // ⬅️ sostituisci con il tuo endpoint Formspree o simile
-            method="POST"
-            className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left"
-          >
-            <div className="col-span-1">
-              <label className="block mb-2 text-sm font-medium">Nome</label>
-              <input
-                type="text"
-                name="nome"
-                required
-                className="w-full px-4 py-3 rounded-md bg-gray-900 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
-              />
-            </div>
-
-            <div className="col-span-1">
-              <label className="block mb-2 text-sm font-medium">Email</label>
-              <input
-                type="email"
-                name="email"
-                required
-                className="w-full px-4 py-3 rounded-md bg-gray-900 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
-              />
-            </div>
-
-            <div className="col-span-1 md:col-span-2">
-              <label className="block mb-2 text-sm font-medium">Messaggio</label>
-              <textarea
-                name="messaggio"
-                rows={5}
-                required
-                className="w-full px-4 py-3 rounded-md bg-gray-900 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
-              />
-            </div>
-
-            <div className="col-span-1 md:col-span-2 text-center">
-              <button
-                type="submit"
-                className="mt-4 inline-block bg-emerald-500 hover:bg-emerald-400 text-black font-semibold px-8 py-3 rounded-full shadow-lg hover:scale-105 transition-all duration-300"
-              >
-                Invia Messaggio
-              </button>
-            </div>
-          </form>
-        </div>
-      </section>
-
+     
 
 
 
@@ -482,87 +428,58 @@ export default function Home() {
       </section>
 
       {/* CONTATTI */}
-      <section id="contatti" className="bg-black text-brand-light py-24 px-6">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Contattami
-          </h2>
+      {/* FORM */}
+      <section id="contatti" className="bg-black text-white py-24 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-center mb-12 text-white">Contattami</h2>
           <p className="text-lg text-gray-400 mb-12">
-            Vuoi iniziare il percorso o ricevere più informazioni? Compila il modulo qui sotto e ti ricontatterò al più presto.
+            Scrivimi per richiedere una call gratuita o avere maggiori informazioni sul percorso.
           </p>
 
           <form
-            action="https://formspree.io/f/{TUO-CODICE}" // 🔁 sostituisci con il tuo codice formspree
+            action="https://formspree.io/f/YOUR_FORM_ID" // ⬅️ sostituisci con il tuo endpoint Formspree o simile
             method="POST"
-            className="grid gap-6 text-left"
+            className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left"
           >
-            {/* Nome */}
-            <div>
-              <label htmlFor="nome" className="block text-sm text-gray-300 mb-2">
-                Nome
-              </label>
+            <div className="col-span-1">
+              <label className="block mb-2 text-sm font-medium">Nome</label>
               <input
                 type="text"
                 name="nome"
-                id="nome"
                 required
-                placeholder="Il tuo nome"
-                className="w-full px-4 py-3 rounded-md bg-brand-gray border border-brand-dark text-white focus:outline-none focus:ring-2 focus:ring-brand-accent transition"
+                className="w-full px-4 py-3 rounded-md bg-gray-900 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
               />
             </div>
 
-            {/* Email */}
-            <div>
-              <label htmlFor="email" className="block text-sm text-gray-300 mb-2">
-                Email
-              </label>
+            <div className="col-span-1">
+              <label className="block mb-2 text-sm font-medium">Email</label>
               <input
                 type="email"
                 name="email"
-                id="email"
                 required
-                placeholder="tu@email.com"
-                className="w-full px-4 py-3 rounded-md bg-brand-gray border border-brand-dark text-white focus:outline-none focus:ring-2 focus:ring-brand-accent transition"
+                className="w-full px-4 py-3 rounded-md bg-gray-900 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
               />
             </div>
 
-            {/* Messaggio */}
-            <div>
-              <label htmlFor="messaggio" className="block text-sm text-gray-300 mb-2">
-                Messaggio
-              </label>
+            <div className="col-span-1 md:col-span-2">
+              <label className="block mb-2 text-sm font-medium">Messaggio</label>
               <textarea
                 name="messaggio"
-                id="messaggio"
                 rows={5}
                 required
-                placeholder="Scrivimi qui cosa ti interessa approfondire..."
-                className="w-full px-4 py-3 rounded-md bg-brand-gray border border-brand-dark text-white focus:outline-none focus:ring-2 focus:ring-brand-accent transition resize-none"
+                className="w-full px-4 py-3 rounded-md bg-gray-900 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
               />
             </div>
 
-            {/* Submit */}
-            <div className="text-center">
+            <div className="col-span-1 md:col-span-2 text-center">
               <button
                 type="submit"
-                className="inline-block bg-brand-accent text-black px-8 py-3 rounded-full font-semibold hover:bg-brand-accentLight transition"
+                className="mt-4 inline-block bg-emerald-500 hover:bg-emerald-400 text-black font-semibold px-8 py-3 rounded-full shadow-lg hover:scale-105 transition-all duration-300"
               >
-                Invia messaggio
+                Invia Messaggio
               </button>
             </div>
           </form>
-
-          {/* WhatsApp CTA */}
-          <div className="mt-10">
-            <a
-              href="https://wa.me/393420000000?text=Ciao%20Gianluigi,%20ti%20scrivo%20dal%20sito!"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-brand-accent hover:underline"
-            >
-              📱 Oppure scrivimi direttamente su WhatsApp
-            </a>
-          </div>
         </div>
       </section>
 
