@@ -1,64 +1,45 @@
 @import "tailwindcss";
 
+/* ====== Design tokens di progetto ====== */
 :root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-  --font-sans: var(--font-inter);
-  --font-serif: var(--font-dm-serif);
+  --background:#FFFFFF;   /* bianco */
+  --foreground:#000000;   /* testo scuro */
+  --muted:#D1D0CB;        /* sabbia */
+  --accent:#A0381B;       /* ruggine */
 }
 
+/* ====== Tailwind v4: token per le utility (bg-brand-*, text-brand-*) ====== */
 @theme inline {
+  /* colori "brand-*" usabili come bg-brand-*, text-brand-*, border-brand-* */
+  --color-brand-black: #000000;
+  --color-brand-white: #FFFFFF;
+  --color-brand-sand:  #D1D0CB;
+  --color-brand-rust:  #A0381B;
+
+  /* comodi alias se vuoi usare bg-background, text-foreground, ecc. */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-muted:      var(--muted);
+  --color-accent:     var(--accent);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --font-sans: var(--font-inter);
-    --font-serif: var(--font-dm-serif);
-  }
+/* ====== Base ====== */
+html, body {
+  background: var(--background);
+  color: var(--foreground);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans);
+  /* Arapey arriva dalla variabile impostata da next/font in layout.tsx */
+  font-family: var(--font-serif);
 }
 
+/* Mobile tweaks (puoi lasciare i tuoi) */
 @media (max-width: 480px) {
-  h1 {
-    font-size: 1.75rem !important;
-    line-height: 2.25rem;
-    text-align: center;
-  }
-
-  h2 {
-    font-size: 1.5rem !important;
-    line-height: 2rem;
-    text-align: center;
-  }
-
-  section {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  p {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .button {
-    font-size: 0.875rem;
-    padding: 0.75rem 1.5rem;
-  }
+  h1 { font-size: 1.75rem !important; line-height: 2.25rem; text-align: center; }
+  h2 { font-size: 1.5rem !important; line-height: 2rem; text-align: center; }
+  section { padding-left: 1rem; padding-right: 1rem; }
+  p { font-size: 1rem; line-height: 1.6; }
+  img { max-width: 100%; height: auto; }
+  .button { font-size: 0.875rem; padding: 0.75rem 1.5rem; }
 }

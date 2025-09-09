@@ -1,12 +1,9 @@
 'use client';
 
 import Header from '../Components/Header'
-
 import SocialSidebar from '../Components/SocialSidebar'
 import { Target, ClipboardList, Wallet, PhoneCall } from 'lucide-react'
-
 import FaqItem from '../Components/FaqItem'
-
 import { FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa'
 import { motion } from "framer-motion"
 
@@ -16,210 +13,156 @@ export default function Home() {
       <Header />
       <SocialSidebar />
 
-      {/* HERO */}
-      <section
-        id="hero"
-        className="relative bg-gradient-to-br from-gray-900 to-black text-white overflow-hidden pt-5 md:pt-16 pb-16 px-4 sm:px-6 md:px-12 xl:px-24"
-      >
-      {/* Layout desktop */}
-      <div className="hidden md:grid max-w-7xl mx-auto grid-cols-1 md:grid-cols-2 items-center gap-12">
-        
-        {/* Testo Hero con animazione slide-in da sinistra */}
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-          className="relative z-10 text-left space-y-6"
-        >
-          <h1 className="text-4xl md:text-5xl xl:text-6xl font-extrabold leading-tight">
-            Diventa un <br />
-            Terapista D&apos;Elite
+
+    {/* HERO — RUGGINE (desktop: pannello bianco; mobile: card bianca) */}
+    <section
+      id="hero"
+      className="relative overflow-hidden bg-brand-rust text-white pt-28 md:pt-44 pb-16 px-4 sm:px-6 md:px-12 xl:px-24"
+    >
+      {/* Pannello bianco SOLO desktop */}
+      <div
+        aria-hidden
+        className="hidden md:block absolute inset-y-0 right-0 w-[54%] bg-brand-white"
+        style={{ clipPath: 'polygon(18% 0, 100% 0, 100% 100%, 0 100%)' }}
+      />
+
+      {/* DESKTOP */}
+      <div className="hidden md:grid relative max-w-7xl mx-auto grid-cols-1 md:grid-cols-2 items-center gap-12">
+        <div className="relative z-10 text-left space-y-6">
+          <h1 className="font-display text-4xl md:text-5xl xl:text-6xl leading-tight">
+            Diventa un <br /> Terapista D&apos;Elite
           </h1>
-          <p className="text-lg md:text-xl text-gray-300">
+          <p className="text-lg md:text-xl text-white/90">
             Percorsi per operatori olistici e del benessere che vogliono distinguersi e crescere davvero.
           </p>
-          <motion.a
+          <a
             href="#percorso"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-block mt-2 px-8 py-3 bg-emerald-500 text-black font-semibold rounded-full shadow-lg hover:scale-105 transition duration-300"
+            className="inline-block mt-2 px-8 py-3 bg-brand-white text-brand-black font-semibold rounded-full shadow-lg hover:scale-105 transition"
           >
             Scopri il percorso
-          </motion.a>
-        </motion.div>
+          </a>
+        </div>
 
-        {/* Immagine desktop con fade-in leggero e zoom-in */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.2, delay: 0.3 }}
-          className="relative flex justify-center md:justify-end z-0"
-        >
+        <div className="relative z-10 flex justify-center md:justify-end">
           <img
             src="/hero.jpg"
             alt="Gianluigi Merisio"
-            className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl object-contain opacity-95"
+            className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,.25)]"
           />
-        </motion.div>
+        </div>
       </div>
 
-
-
-      {/* MOBILE HERO - solo su mobile */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="relative flex flex-col items-center text-center md:hidden px-4 pt-0 pb-16 bg-gradient-to-br from-gray-900 to-black text-white"
-      >
-        {/* Immagine con sfumatura rialzata */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.2 }}
-          className="w-72 relative -mb-14 z-10"
-        >
+      {/* MOBILE — immagine su ruggine + CARD bianca per testo/CTA */}
+      <div className="md:hidden">
+        <div className="px-4 pt-2">
           <img
             src="/hero.jpg"
             alt="Gianluigi Merisio"
-            className="w-full object-contain"
+            className="mx-auto w-56 sm:w-64 h-auto object-contain"
             style={{
-              maskImage: 'linear-gradient(to bottom, black 60%, rgba(0, 0, 0, 0.4) 85%, transparent 100%)',
-              WebkitMaskImage: 'linear-gradient(to bottom, black 60%, rgba(0, 0, 0, 0.4) 85%, transparent 100%)',
+              maskImage: 'linear-gradient(to bottom, black 60%, rgba(0,0,0,.28) 84%, transparent 100%)',
+              WebkitMaskImage: 'linear-gradient(to bottom, black 60%, rgba(0,0,0,.28) 84%, transparent 100%)',
             }}
           />
-        </motion.div>
+        </div>
 
-        {/* Testo sovrapposto */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.4 }}
-          className="relative z-20 mt-2 space-y-4"
-        >
-          <h1 className="text-3xl font-extrabold leading-snug">
-            Diventa un <br />
-            Terapista D&apos;Elite
+        {/* Card bianca che crea lo stacco netto dal ruggine */}
+        <div className="-mt-2 bg-brand-white text-brand-black rounded-t-[28px] shadow-[0_-10px_30px_rgba(0,0,0,.08)] px-5 pt-6 pb-10 text-center">
+          <h1 className="font-display text-[26px] leading-tight">
+            Diventa un <br /> Terapista D&apos;Elite
           </h1>
-          <p className="text-base text-gray-300">
+          <p className="mt-3 text-[15px] leading-relaxed text-brand-black/70">
             Percorsi per operatori olistici e del benessere che vogliono distinguersi e crescere davvero.
           </p>
-          <motion.a
+          <a
             href="#percorso"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-block mt-2 px-6 py-3 bg-emerald-500 text-black font-semibold rounded-full shadow hover:scale-105 transition"
+            className="mt-5 inline-block px-6 py-3 bg-brand-rust text-white font-semibold rounded-full shadow hover:scale-105 transition"
           >
             Scopri il percorso
-          </motion.a>
-        </motion.div>
-      </motion.div>
+          </a>
+        </div>
 
+        {/* sottile fascia bianca per raccordare alla sezione successiva */}
+        <div aria-hidden className="h-4 bg-brand-white" />
+      </div>
 
-      </section>
+      {/* SEPARATORE DESKTOP: obliquo verso il bianco */}
+      <svg
+        aria-hidden
+        className="hidden md:block absolute bottom-0 left-0 right-0 w-full h-20"
+        viewBox="0 0 1440 120"
+        preserveAspectRatio="none"
+      >
+        <path d="M0,120 L1440,0 L1440,120 Z" fill="#FFFFFF" />
+      </svg>
+    </section>
 
-
-      {/* PERCORSO */}
-      <section id="percorso" className="bg-gray-900 py-20 px-6 md:px-12 xl:px-24">
+      {/* PERCORSO — BIANCO */}
+      <section id="percorso" className="bg-brand-white text-brand-black py-24 px-6 md:px-12 xl:px-24">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-center text-white">Percorso Strategico Evolutivo</h2>
+          <h2 className="font-display text-3xl mb-8 text-center text-brand-black">Percorso Strategico Evolutivo</h2>
 
-          {/* TIMELINE DEL PERCORSO */}
+          {/* TIMELINE */}
           <section className="py-12">
             <div className="max-w-5xl mx-auto px-6 md:px-12 xl:px-24">
-              <h3 className="text-2xl font-bold mb-8 text-center text-emerald-400">Le 5 Fasi del Percorso Strategico Evolutivo</h3>
-              <div className="relative border-l border-gray-700 ml-4 space-y-10">
+              <h3 className="font-display text-2xl mb-8 text-center text-brand-rust">Le 5 Fasi del Percorso Strategico Evolutivo</h3>
+              <div className="relative border-l border-brand-sand/40 ml-4 space-y-10">
 
-                <motion.div
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: 0.2 }}
-                  viewport={{ once: true }}
-                >
-
-                  {/* Fase 1 */}
+                {/* Fase 1 */}
+                <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.2 }} viewport={{ once: true }}>
                   <div className="pl-6 relative">
-                    <div className="absolute left-[-14px] top-1 w-4 h-4 bg-emerald-400 rounded-full"></div>
-                    <h4 className="text-xl font-semibold text-white">1. Sbatti la testa contro lo specchio™</h4>
-                    <p className="text-gray-300">Consapevolezza, verità, roadmap iniziale — test diagnostici e mappatura punti ciechi.</p>
+                    <div className="absolute left-[-14px] top-1 w-4 h-4 bg-brand-rust rounded-full"></div>
+                    <h4 className="text-xl font-semibold text-brand-black">1. Sbatti la testa contro lo specchio™</h4>
+                    <p className="text-brand-black/70">Consapevolezza, verità, roadmap iniziale — test diagnostici e mappatura punti ciechi.</p>
                   </div>
-
                 </motion.div>
 
-                <motion.div
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: 0.2 }}
-                  viewport={{ once: true }}
-                >
-
-                  {/* Fase 2 */}
+                {/* Fase 2 */}
+                <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.2 }} viewport={{ once: true }}>
                   <div className="pl-6 relative">
-                    <div className="absolute left-[-14px] top-1 w-4 h-4 bg-emerald-400 rounded-full"></div>
-                    <h4 className="text-xl font-semibold text-white">2. La strategia: dalla coscienza all’azione</h4>
-                    <p className="text-gray-300">Posizionamento, mindset strategico, bio professionale e piano d’azione personalizzato.</p>
+                    <div className="absolute left-[-14px] top-1 w-4 h-4 bg-brand-rust rounded-full"></div>
+                    <h4 className="text-xl font-semibold text-brand-black">2. La strategia: dalla coscienza all’azione</h4>
+                    <p className="text-brand-black/70">Posizionamento, mindset strategico, bio professionale e piano d’azione personalizzato.</p>
                   </div>
-
                 </motion.div>
 
-                <motion.div
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: 0.2 }}
-                  viewport={{ once: true }}
-                >
-
-                  {/* Fase 3 */}
+                {/* Fase 3 */}
+                <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.2 }} viewport={{ once: true }}>
                   <div className="pl-6 relative">
-                    <div className="absolute left-[-14px] top-1 w-4 h-4 bg-emerald-400 rounded-full"></div>
-                    <h4 className="text-xl font-semibold text-white">3. Costruisci e differenziati</h4>
-                    <p className="text-gray-300">Routine produttiva, strategia personale, verticalità e impatto reale sul tuo mercato.</p>
+                    <div className="absolute left-[-14px] top-1 w-4 h-4 bg-brand-rust rounded-full"></div>
+                    <h4 className="text-xl font-semibold text-brand-black">3. Costruisci e differenziati</h4>
+                    <p className="text-brand-black/70">Routine produttiva, strategia personale, verticalità e impatto reale sul tuo mercato.</p>
                   </div>
-
                 </motion.div>
 
-                <motion.div
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: 0.2 }}
-                  viewport={{ once: true }}
-                >
-
-                  {/* Fase 4 */}
+                {/* Fase 4 */}
+                <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.2 }} viewport={{ once: true }}>
                   <div className="pl-6 relative">
-                    <div className="absolute left-[-14px] top-1 w-4 h-4 bg-emerald-400 rounded-full"></div>
-                    <h4 className="text-xl font-semibold text-white">4. Analizza, ottimizza e scala</h4>
-                    <p className="text-gray-300">KPI, miglioramento continuo e creazione di un sistema sostenibile di crescita.</p>
+                    <div className="absolute left-[-14px] top-1 w-4 h-4 bg-brand-rust rounded-full"></div>
+                    <h4 className="text-xl font-semibold text-brand-black">4. Analizza, ottimizza e scala</h4>
+                    <p className="text-brand-black/70">KPI, miglioramento continuo e creazione di un sistema sostenibile di crescita.</p>
                   </div>
-
                 </motion.div>
 
-                <motion.div
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: 0.2 }}
-                  viewport={{ once: true }}
-                >
-
-                  {/* Fase 5 */}
+                {/* Fase 5 */}
+                <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.2 }} viewport={{ once: true }}>
                   <div className="pl-6 relative">
-                    <div className="absolute left-[-14px] top-1 w-4 h-4 bg-emerald-400 rounded-full"></div>
-                    <h4 className="text-xl font-semibold text-white">5. Realizza e valorizza il cambiamento</h4>
-                    <p className="text-gray-300">Consolidamento, piano di sviluppo personale, toolkit operativo e piena autonomia.</p>
+                    <div className="absolute left-[-14px] top-1 w-4 h-4 bg-brand-rust rounded-full"></div>
+                    <h4 className="text-xl font-semibold text-brand-black">5. Realizza e valorizza il cambiamento</h4>
+                    <p className="text-brand-black/70">Consolidamento, piano di sviluppo personale, toolkit operativo e piena autonomia.</p>
                   </div>
-
                 </motion.div>
 
               </div>
             </div>
           </section>
 
-          <div className="bg-white text-black p-6 md:p-8 rounded-xl shadow-xl space-y-8 text-left max-w-xl mx-auto">
-
+          {/* Card riassuntiva sabbia */}
+          <div className="bg-brand-sand text-brand-black p-6 md:p-8 rounded-xl shadow-xl space-y-8 text-left max-w-xl mx-auto">
             {/* A chi è rivolto */}
             <div className="flex items-center gap-4">
               <div className="min-w-[2rem] flex justify-center items-center">
-                <Target className="text-emerald-500 w-7 h-7" />
+                <Target className="text-brand-rust w-7 h-7" />
               </div>
               <p className="text-base md:text-lg leading-relaxed">
                 <strong>A chi è rivolto:</strong> terapisti, operatori del benessere e professionisti olistici che vogliono <span className="underline underline-offset-4">posizionarsi con autenticità</span> e ottenere risultati reali.
@@ -229,7 +172,7 @@ export default function Home() {
             {/* Include */}
             <div className="flex items-center gap-4">
               <div className="min-w-[2rem] flex justify-center items-center">
-                <ClipboardList className="text-emerald-500 w-7 h-7" />
+                <ClipboardList className="text-brand-rust w-7 h-7" />
               </div>
               <p className="text-base md:text-lg leading-relaxed">
                 <strong>Include:</strong> 12 sessioni 1:1, strumenti pratici, supporto WhatsApp, test iniziali e materiali personalizzati.
@@ -239,7 +182,7 @@ export default function Home() {
             {/* Investimento */}
             <div className="flex items-center gap-4">
               <div className="min-w-[2rem] flex justify-center items-center">
-                <Wallet className="text-emerald-500 w-7 h-7" />
+                <Wallet className="text-brand-rust w-7 h-7" />
               </div>
               <p className="text-base md:text-lg leading-relaxed">
                 <strong>Investimento:</strong> <span className="font-semibold">880€</span> (2 tranche da 440€)
@@ -252,184 +195,139 @@ export default function Home() {
                 href="https://wa.me/3489841408"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-black font-semibold px-8 py-3 rounded-full shadow-lg hover:scale-105 transition-all duration-300"
+                className="inline-flex items-center gap-2 bg-brand-rust hover:bg-brand-rust/90 text-white font-semibold px-8 py-3 rounded-full shadow-lg hover:scale-105 transition-all duration-300"
               >
                 <PhoneCall className="w-5 h-5" />
                 Richiedi una Call Gratuita
               </a>
             </div>
           </div>
-
-
-
         </div>
       </section>
 
-      {/* ABOUT M2E */}
-      <section id="about" className="max-w-4xl mx-auto px-6 py-20">
-        <h2 className="text-3xl font-bold mb-8 text-center">About Me</h2>
-        <div className="flex flex-col md:flex-row items-center gap-10">
-          <img
-            src="/fotoprofilo.jpg"
-            alt="Foto di Merisio Gianluigi"
-            className="w-48 h-48 rounded-full object-cover shadow-lg"
-          />
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <div>
-              <h3 className="text-2xl font-bold mb-4">Merisio Gianluigi</h3>
-              <p className="text-gray-300 text-lg leading-relaxed">
-                Professionista con eccellenti competenze tecniche e manageriali, maturate in molti anni nel settore delle vendite e del beauty.
-                Mi distinguo per leadership, pianificazione strategica e capacità di aiutare aziende e persone a raggiungere risultati concreti.
-                Amo costruire relazioni autentiche, stimolare il cambiamento e accompagnare professionisti nella loro evoluzione.
-              </p>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* TESTIMONIANZE */}
-      <section id="testimonianze" className="bg-black py-20 px-6 md:px-12 xl:px-24">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 text-white">Dicono di me</h2>
-
-          <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-2">
-
+      {/* ABOUT — SABBIA */}
+      <section id="about" className="bg-brand-sand text-brand-black">
+        <div className="max-w-4xl mx-auto px-6 py-20">
+          <h2 className="font-display text-3xl mb-8 text-center">About Me</h2>
+          <div className="flex flex-col md:flex-row items-center gap-10">
+            <img
+              src="/fotoprofilo.jpg"
+              alt="Foto di Merisio Gianluigi"
+              className="w-48 h-48 rounded-full object-cover shadow-lg"
+            />
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
+              <div>
+                <h3 className="font-display text-2xl mb-4">Merisio Gianluigi</h3>
+                <p className="text-brand-black/80 text-lg leading-relaxed">
+                  Professionista con eccellenti competenze tecniche e manageriali, maturate in molti anni nel settore delle vendite e del beauty.
+                  Mi distinguo per leadership, pianificazione strategica e capacità di aiutare aziende e persone a raggiungere risultati concreti.
+                  Amo costruire relazioni autentiche, stimolare il cambiamento e accompagnare professionisti nella loro evoluzione.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
-              {/* Testimonianza 1 */}
-              <div className="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-800 hover:scale-[1.02] transition duration-300 ease-out">
+      {/* TESTIMONIANZE — BIANCO */}
+      <section id="testimonianze" className="bg-brand-white text-brand-black py-20 px-6 md:px-12 xl:px-24">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="font-display text-3xl text-center mb-12 text-brand-black">Dicono di me</h2>
+
+          <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-2">
+            {/* Card 1 */}
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+              <div className="bg-brand-white p-6 rounded-xl shadow border border-brand-sand/60 hover:scale-[1.02] transition duration-300 ease-out">
                 <div className="flex items-center gap-4 mb-4">
                   <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente 1" className="w-14 h-14 rounded-full object-cover" />
                   <div>
-                    <h4 className="text-lg font-semibold text-white">Chiara R.</h4>
-                    <p className="text-sm text-gray-400">Estetista professionale</p>
+                    <h4 className="text-lg font-semibold text-brand-black">Chiara R.</h4>
+                    <p className="text-sm text-brand-black/60">Estetista professionale</p>
                   </div>
                 </div>
-                <p className="text-gray-300 italic">
+                <p className="text-brand-black/80 italic">
                   “Il percorso con Gianluigi è stato una svolta. Ho capito chi sono, cosa voglio e ho finalmente una strategia concreta.”
                 </p>
               </div>
-
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-            >
-
-              {/* Testimonianza 2 */}
-              <div className="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-800 hover:scale-[1.02] transition duration-300 ease-out">
+            {/* Card 2 */}
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+              <div className="bg-brand-white p-6 rounded-xl shadow border border-brand-sand/60 hover:scale-[1.02] transition duration-300 ease-out">
                 <div className="flex items-center gap-4 mb-4">
                   <img src="https://randomuser.me/api/portraits/men/36.jpg" alt="Cliente 2" className="w-14 h-14 rounded-full object-cover" />
                   <div>
-                    <h4 className="text-lg font-semibold text-white">Luca M.</h4>
-                    <p className="text-sm text-gray-400">Massoterapista</p>
+                    <h4 className="text-lg font-semibold text-brand-black">Luca M.</h4>
+                    <p className="text-sm text-brand-black/60">Massoterapista</p>
                   </div>
                 </div>
-                <p className="text-gray-300 italic">
+                <p className="text-brand-black/80 italic">
                   “Mi sono smarcato dal ‘faccio tutto per tutti’. Ora lavoro solo con i clienti giusti, e guadagno di più con meno stress.”
                 </p>
               </div>
-
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-            >
-
-              {/* Testimonianza 3 */}
-              <div className="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-800 hover:scale-[1.02] transition duration-300 ease-out">
+            {/* Card 3 */}
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+              <div className="bg-brand-white p-6 rounded-xl shadow border border-brand-sand/60 hover:scale-[1.02] transition duration-300 ease-out">
                 <div className="flex items-center gap-4 mb-4">
                   <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="Cliente 3" className="w-14 h-14 rounded-full object-cover" />
                   <div>
-                    <h4 className="text-lg font-semibold text-white">Francesca D.</h4>
-                    <p className="text-sm text-gray-400">Coach Olistica</p>
+                    <h4 className="text-lg font-semibold text-brand-black">Francesca D.</h4>
+                    <p className="text-sm text-brand-black/60">Coach Olistica</p>
                   </div>
                 </div>
-                <p className="text-gray-300 italic">
+                <p className="text-brand-black/80 italic">
                   “Gianluigi ha un dono: ti aiuta a vedere quello che non vedi. Ho ricostruito la mia offerta da zero, con autenticità.”
                 </p>
               </div>
-
             </motion.div>
-
           </div>
         </div>
       </section>
 
-
-
-
-
-
-      {/* FAQ */}
-      <section id="faq" className="bg-gray-900 py-20 px-6 md:px-12 xl:px-24">
+      {/* FAQ — RUGGINE */}
+      <section id="faq" className="bg-brand-rust text-white py-20 px-6 md:px-12 xl:px-24">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-white mb-12">Domande Frequenti</h2>
+          <h2 className="font-display text-3xl text-center mb-3">Domande Frequenti</h2>
+          <p className="text-center text-white/80 mb-10">Le risposte rapide alle domande più comuni.</p>
 
-          <div className="space-y-6">
+          <div className="space-y-5">
+            <motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.4 }} viewport={{ once: true }}>
+              <FaqItem
+                question="Devo avere già un’attività avviata per accedere al percorso?"
+                answer="No, puoi iniziare anche se sei in fase di transizione o apertura. Il percorso ti aiuterà proprio a partire con consapevolezza e metodo."
+              />
+            </motion.section>
 
-              <motion.section
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <FaqItem
-                  question="Devo avere già un’attività avviata per accedere al percorso?"
-                  answer="No, puoi iniziare anche se sei in fase di transizione o apertura. Il percorso ti aiuterà proprio a partire con consapevolezza e metodo."
-                />
-              </motion.section>
+            <motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.4 }} viewport={{ once: true }}>
+              <FaqItem
+                question="Posso pagare in due rate?"
+                answer="Sì, puoi versare 440€ all’inizio e i restanti 440€ dopo la seconda fase. Il pagamento può essere effettuato via bonifico o PayPal."
+              />
+            </motion.section>
 
-              <motion.section
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <FaqItem
-                  question="Posso pagare in due rate?"
-                  answer="Sì, puoi versare 440€ all’inizio e i restanti 440€ dopo la seconda fase. Il pagamento può essere effettuato via bonifico o PayPal."
-                />
-              </motion.section>
-
-              <motion.section
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <FaqItem
-                  question="Cosa succede se salto una sessione?"
-                  answer="Nessun problema: possiamo riprogrammarla entro 10 giorni. La flessibilità fa parte del mio metodo."
-                />
-              </motion.section>
-
+            <motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.4 }} viewport={{ once: true }}>
+              <FaqItem
+                question="Cosa succede se salto una sessione?"
+                answer="Nessun problema: possiamo riprogrammarla entro 10 giorni. La flessibilità fa parte del mio metodo."
+              />
+            </motion.section>
           </div>
         </div>
       </section>
 
 
-      {/* VIDEO + CTA WHATSAPP */}
-      <section id="video" className="bg-black py-20 px-6 md:px-12 xl:px-24">
+      {/* VIDEO — BIANCO */}
+      <section id="video" className="bg-brand-white text-brand-black py-20 px-6 md:px-12 xl:px-24">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Guarda il video</h2>
-          <p className="text-lg text-gray-300 mb-10">Chi sono, da dove parto e il mio percorso!</p>
+          <h2 className="font-display text-3xl text-brand-black mb-4">Guarda il video</h2>
+          <p className="text-lg text-brand-black/70 mb-10">Chi sono, da dove parto e il mio percorso!</p>
 
           <div className="relative pb-[56.25%] h-0 mb-10">
             <iframe
@@ -477,39 +375,34 @@ export default function Home() {
             </div>
           </div>
 
-          <motion.a
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="..."
           >
-
-
             <a
               href="https://wa.me/3489841408?text=Ciao%20Gianluigi%2C%20ho%20visto%20il%20video%20e%20voglio%20saperne%20di%20pi%C3%B9%20sul%20percorso%20evolutivo."
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-12 inline-block bg-emerald-500 text-black px-8 py-3 rounded-full text-lg font-semibold hover:scale-105 transition"
+              className="mt-12 inline-block bg-brand-rust text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-brand-rust/90 hover:scale-105 transition"
             >
               Scrivimi su WhatsApp
             </a>
-
-          </motion.a>
+          </motion.div>
         </div>
       </section>
 
-      {/* CONTATTI */}
-      {/* FORM */}
-      <section id="contatti" className="bg-black text-white py-24 px-6 md:px-12 xl:px-24">
+      {/* CONTATTI — RUGGINE */}
+      <section id="contatti" className="bg-brand-rust text-white py-24 px-6 md:px-12 xl:px-24">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-center mb-12 text-white">Contattami</h2>
-          <p className="text-lg text-gray-400 mb-12">
+          <h2 className="font-display text-3xl text-center mb-12 text-white">Contattami</h2>
+          <p className="text-lg text-white/90 mb-12">
             Scrivimi per richiedere una call gratuita o avere maggiori informazioni sul percorso.
           </p>
 
           <form
-            action="https://formspree.io/f/YOUR_FORM_ID" // ⬅️ sostituisci con il tuo endpoint Formspree o simile
+            action="https://formspree.io/f/YOUR_FORM_ID"
             method="POST"
             className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left"
           >
@@ -519,7 +412,7 @@ export default function Home() {
                 type="text"
                 name="nome"
                 required
-                className="w-full px-4 py-3 rounded-md bg-gray-900 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                className="w-full px-4 py-3 rounded-md bg-brand-white text-brand-black border border-white/20 focus:outline-none focus:ring-2 focus:ring-white"
               />
             </div>
 
@@ -529,7 +422,7 @@ export default function Home() {
                 type="email"
                 name="email"
                 required
-                className="w-full px-4 py-3 rounded-md bg-gray-900 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                className="w-full px-4 py-3 rounded-md bg-brand-white text-brand-black border border-white/20 focus:outline-none focus:ring-2 focus:ring-white"
               />
             </div>
 
@@ -539,14 +432,14 @@ export default function Home() {
                 name="messaggio"
                 rows={5}
                 required
-                className="w-full px-4 py-3 rounded-md bg-gray-900 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                className="w-full px-4 py-3 rounded-md bg-brand-white text-brand-black border border-white/20 focus:outline-none focus:ring-2 focus:ring-white"
               />
             </div>
 
             <div className="col-span-1 md:col-span-2 text-center">
               <button
                 type="submit"
-                className="mt-4 inline-block bg-emerald-500 hover:bg-emerald-400 text-black font-semibold px-8 py-3 rounded-full shadow-lg hover:scale-105 transition-all duration-300"
+                className="mt-4 inline-block bg-brand-black hover:bg-brand-black/90 text-white font-semibold px-8 py-3 rounded-full shadow-lg hover:scale-105 transition-all duration-300"
               >
                 Invia Messaggio
               </button>
@@ -555,17 +448,16 @@ export default function Home() {
         </div>
       </section>
 
-
-      {/* FOOTER */}
-      <footer className="bg-black border-t border-gray-800 py-10 text-center text-sm text-gray-400">
+      {/* FOOTER — BIANCO */}
+      <footer className="bg-brand-white border-t border-brand-sand/40 py-10 text-center text-sm text-brand-black/70">
         <div className="mb-6">
-          <p className="text-base font-semibold text-white mb-4">Seguimi sui social</p>
+          <p className="text-base font-semibold text-brand-black mb-4">Seguimi sui social</p>
           <div className="flex justify-center space-x-6 text-2xl">
             <a
               href="https://www.instagram.com/i.m.gigi_"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-emerald-400 transition"
+              className="hover:text-brand-rust transition"
             >
               <FaInstagram />
             </a>
@@ -573,7 +465,7 @@ export default function Home() {
               href="https://www.linkedin.com/in/gianluigi-merisio-22a04912b"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-emerald-400 transition"
+              className="hover:text-brand-rust transition"
             >
               <FaLinkedin />
             </a>
@@ -581,15 +473,14 @@ export default function Home() {
               href="https://www.youtube.com/@i.m.Gigi_"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-emerald-400 transition"
+              className="hover:text-brand-rust transition"
             >
               <FaYoutube />
             </a>
           </div>
         </div>
-        <p className="mt-6 text-gray-500">&copy; 2025 Merisio Gianluigi. Tutti i diritti riservati.</p>
+        <p className="mt-6">© 2025 Merisio Gianluigi. Tutti i diritti riservati.</p>
       </footer>
-
     </>
   )
 }

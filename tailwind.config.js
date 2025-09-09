@@ -9,16 +9,17 @@ module.exports = {
   extend: {
     colors: {
       brand: {
-        dark: '#0a0a0a',
-        gray: '#171717',
-        light: '#f8f8f0',
-        accent: '#10b981',
-        accentLight: '#34d399',
+
+        black: "#000000",
+        sand:  "#D1D0CB",
+        white: "#FFFFFF",
+        rust:  "#A0381B",
       }
     },
     fontFamily: {
-      sans: ['var(--font-inter)', 'sans-serif'],
-      serif: ['var(--font-dm-serif)', 'serif'],
+      serif:   ["var(--font-serif)", "serif"],       // Arapey
+      display: ["var(--font-display)", "serif"],     // TAN HARMONY
+      script:  ["var(--font-script)", "cursive"],    // Beautifully delicious script
     }
   }
 },

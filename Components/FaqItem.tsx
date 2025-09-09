@@ -1,52 +1,49 @@
-'use client'
+'use client';
 
-import { useState } from 'react'
-import { motion } from 'framer-motion'
+import { useState } from 'react';
+import { ChevronDown } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
-interface FaqItemProps {
-  question: string
-  answer: string
-}
-
-export default function FaqItem({ question, answer }: FaqItemProps) {
-  const [isOpen, setIsOpen] = useState(false)
-  const [hasOpened, setHasOpened] = useState(false)
-
-  const toggle = () => {
-    const next = !isOpen
-    setIsOpen(next)
-    if (next) setHasOpened(true)
-  }
+export default function FaqItem({
+  question,
+  answer,
+}: {
+  question: string;
+  answer: string;
+}) {
+  const [open, setOpen] = useState(false);
 
   return (
-    <div className="bg-gray-800 p-5 rounded-lg shadow-md border border-gray-700">
+    <div
+      className={`rounded-xl transition
+      ${open
+        ? 'bg-brand-white border border-brand-sand/70 shadow-md'
+        : 'bg-brand-white border border-brand-sand/40'}`}
+    >
       <button
-        onClick={toggle}
-        className="w-full text-left cursor-pointer text-lg font-semibold text-white flex justify-between items-center"
+        onClick={() => setOpen(v => !v)}
+        className="w-full flex items-center justify-between gap-4 px-5 md:px-6 py-4 text-left"
+        aria-expanded={open}
       >
-        {question}
-        <span
-          className={`ml-4 text-emerald-400 transition-transform ${isOpen ? 'rotate-180' : ''}`}
-        >
-          &#9660;
-        </span>
+        <span className="font-semibold text-brand-black">{question}</span>
+        <ChevronDown
+          className={`w-5 h-5 shrink-0 text-brand-rust transition-transform ${open ? 'rotate-180' : ''}`}
+        />
       </button>
-      {isOpen && (
-        hasOpened ? (
-          <p className="mt-3 text-gray-300">{answer}</p>
-        ) : (
-          <motion.p
+
+      <AnimatePresence initial={false}>
+        {open && (
+          <motion.div
+            key="faq-content"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
-            transition={{ duration: 0.3 }}
-            onAnimationComplete={() => setHasOpened(true)}
-            className="mt-3 text-gray-300 overflow-hidden"
+            exit={{ height: 0, opacity: 0 }}
+            className="px-5 md:px-6 pb-5 text-brand-black/80 border-t border-brand-sand/40"
           >
             {answer}
-          </motion.p>
-        )
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
-  )
+  );
 }
-
