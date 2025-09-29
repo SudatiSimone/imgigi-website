@@ -112,7 +112,7 @@ export default function Home() {
                 <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.2 }} viewport={{ once: true }}>
                   <div className="pl-6 relative">
                     <div className="absolute left-[-14px] top-1 w-4 h-4 bg-brand-rust rounded-full"></div>
-                    <h4 className="text-xl font-semibold text-brand-black">1. Sbatti la testa contro lo specchio™</h4>
+                    <h4 className="text-xl font-semibold text-brand-black">1. Esplora</h4>
                     <p className="text-brand-black/70">Consapevolezza, verità, roadmap iniziale — test diagnostici e mappatura punti ciechi.</p>
                   </div>
                 </motion.div>
@@ -121,7 +121,7 @@ export default function Home() {
                 <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.2 }} viewport={{ once: true }}>
                   <div className="pl-6 relative">
                     <div className="absolute left-[-14px] top-1 w-4 h-4 bg-brand-rust rounded-full"></div>
-                    <h4 className="text-xl font-semibold text-brand-black">2. La strategia: dalla coscienza all’azione</h4>
+                    <h4 className="text-xl font-semibold text-brand-black">2. Lancia</h4>
                     <p className="text-brand-black/70">Posizionamento, mindset strategico, bio professionale e piano d’azione personalizzato.</p>
                   </div>
                 </motion.div>
@@ -130,7 +130,7 @@ export default function Home() {
                 <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.2 }} viewport={{ once: true }}>
                   <div className="pl-6 relative">
                     <div className="absolute left-[-14px] top-1 w-4 h-4 bg-brand-rust rounded-full"></div>
-                    <h4 className="text-xl font-semibold text-brand-black">3. Costruisci e differenziati</h4>
+                    <h4 className="text-xl font-semibold text-brand-black">3. Imposta</h4>
                     <p className="text-brand-black/70">Routine produttiva, strategia personale, verticalità e impatto reale sul tuo mercato.</p>
                   </div>
                 </motion.div>
@@ -139,7 +139,7 @@ export default function Home() {
                 <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.2 }} viewport={{ once: true }}>
                   <div className="pl-6 relative">
                     <div className="absolute left-[-14px] top-1 w-4 h-4 bg-brand-rust rounded-full"></div>
-                    <h4 className="text-xl font-semibold text-brand-black">4. Analizza, ottimizza e scala</h4>
+                    <h4 className="text-xl font-semibold text-brand-black">4. Testa</h4>
                     <p className="text-brand-black/70">KPI, miglioramento continuo e creazione di un sistema sostenibile di crescita.</p>
                   </div>
                 </motion.div>
@@ -148,7 +148,7 @@ export default function Home() {
                 <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.2 }} viewport={{ once: true }}>
                   <div className="pl-6 relative">
                     <div className="absolute left-[-14px] top-1 w-4 h-4 bg-brand-rust rounded-full"></div>
-                    <h4 className="text-xl font-semibold text-brand-black">5. Realizza e valorizza il cambiamento</h4>
+                    <h4 className="text-xl font-semibold text-brand-black">5. Evolvi</h4>
                     <p className="text-brand-black/70">Consolidamento, piano di sviluppo personale, toolkit operativo e piena autonomia.</p>
                   </div>
                 </motion.div>
@@ -165,7 +165,7 @@ export default function Home() {
                 <Target className="text-brand-rust w-7 h-7" />
               </div>
               <p className="text-base md:text-lg leading-relaxed">
-                <strong>A chi è rivolto:</strong> terapisti, operatori del benessere e professionisti olistici che vogliono <span className="underline underline-offset-4">posizionarsi con autenticità</span> e ottenere risultati reali.
+                <strong>A chi è rivolto:</strong> Terapisti che vogliono portare il proprio lavoro a un nuovo livello: più autenticità, più visibilità, più risultati - anche economici..
               </p>
             </div>
 
@@ -185,7 +185,7 @@ export default function Home() {
                 <Wallet className="text-brand-rust w-7 h-7" />
               </div>
               <p className="text-base md:text-lg leading-relaxed">
-                <strong>Investimento:</strong> <span className="font-semibold">880€</span> (2 tranche da 440€)
+                <strong>Investimento:</strong> Lavoro solo con chi può davvero trarre beneficio dal percorso. Per questo motivo, prima di parlarti di costi e dettagli pratici, preferisco conoscerti meglio e capire insieme se è ciò di cui hai davvero bisogno.  
               </p>
             </div>
 
@@ -224,9 +224,7 @@ export default function Home() {
               <div>
                 <h3 className="font-display text-2xl mb-4">Merisio Gianluigi</h3>
                 <p className="text-brand-black/80 text-lg leading-relaxed">
-                  Professionista con eccellenti competenze tecniche e manageriali, maturate in molti anni nel settore delle vendite e del beauty.
-                  Mi distinguo per leadership, pianificazione strategica e capacità di aiutare aziende e persone a raggiungere risultati concreti.
-                  Amo costruire relazioni autentiche, stimolare il cambiamento e accompagnare professionisti nella loro evoluzione.
+                  Ho iniziato come terapista, poi sono cresciuto fino a diventare spa manager su navi da crociera, guidando team internazionali e gestendo realtà complesse del settore beauty & wellness. Negli anni ho sviluppato competenze tecniche e manageriali che oggi metto al servizio di professionisti e aziende: dalla leadership alla pianificazione strategica, fino alla capacità di trasformare passione e talento in risultati concreti. Amo costruire relazioni autentiche, stimolare il cambiamento e accompagnare chi lavora nel benessere a fare un salto di qualità, diventando più consapevole, strutturato e riconosciuto..
                 </p>
               </div>
             </motion.div>
@@ -308,7 +306,7 @@ export default function Home() {
             <motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.4 }} viewport={{ once: true }}>
               <FaqItem
                 question="Posso pagare in due rate?"
-                answer="Sì, puoi versare 440€ all’inizio e i restanti 440€ dopo la seconda fase. Il pagamento può essere effettuato via bonifico o PayPal."
+                answer="Sì, puoi versare in 2 o 3 comode rate."
               />
             </motion.section>
 
