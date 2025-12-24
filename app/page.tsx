@@ -33,7 +33,19 @@ export default function Home() {
             Diventa un <br /> Terapista D&apos;Elite
           </h1>
           <p className="text-lg md:text-xl text-white/90">
-            Percorsi per operatori olistici e del benessere che vogliono distinguersi e crescere davvero.
+            Il Metodo Terapisti d’Élite nasce per un motivo semplice: smettere di lavorare tanto e valere poco.
+            È per chi ha competenze vere, ma è ancora incastrato in un lavoro precario, frammentato e sottopagato.<br/>
+            Per chi sa fare il suo mestiere, ma non sa farlo funzionare.<br/>
+            Non è l’ennesimo corso motivazionale.<br/>
+            È un sistema pratico che ti costringe a fare ordine e a costruire un lavoro serio:
+            sapere cosa offri, quanto vali, a chi ti rivolgi e come farti pagare.
+            <br />
+            Qui trasformi il talento in identità professionale.<br/>
+            Offerta, clienti, tempo, soldi e comunicazione: tutto torna sotto controllo.
+            <br/>
+            Il Metodo non ti coccola.<br/>
+            Ti sveglia.<br/>
+            Ti fa prendere decisioni e iniziare a ragionare da professionista d&apos;élite, non da operatore qualunque.
           </p>
           <a
             href="#percorso"
@@ -67,12 +79,21 @@ export default function Home() {
         </div>
 
         {/* Card bianca che crea lo stacco netto dal ruggine */}
-        <div className="-mt-2 bg-brand-white text-brand-black rounded-t-[28px] shadow-[0_-10px_30px_rgba(0,0,0,.08)] px-5 pt-6 pb-10 text-center">
+        <div className="-mt-2 bg-brand-white text-brand-black rounded-t-[28px] shadow-[0_-10px_30px_rgba(0,0,0,.08)] px-5 pt-6 pb-10 text-left">
           <h1 className="font-display text-[26px] leading-tight">
             Diventa un <br /> Terapista D&apos;Elite
           </h1>
           <p className="mt-3 text-[15px] leading-relaxed text-brand-black/70">
-            Percorsi per operatori olistici e del benessere che vogliono distinguersi e crescere davvero.
+                Il Metodo Terapisti d’Élite nasce per un motivo semplice: smettere di lavorare tanto e valere poco.
+                È per chi ha competenze vere, ma è ancora incastrato in un lavoro precario, frammentato e sottopagato. <br/>
+                Per chi sa fare il suo mestiere, ma non sa farlo funzionare.
+                Non è l’ennesimo corso motivazionale.<br/>
+                È un sistema pratico che ti costringe a fare ordine e a costruire un lavoro serio:
+                sapere cosa offri, quanto vali, a chi ti rivolgi e come farti pagare.
+                Qui trasformi il talento in identità professionale.<br/>
+                Offerta, clienti, tempo, soldi e comunicazione: tutto torna sotto controllo.<br/>
+                Il Metodo non ti coccola. Ti sveglia.<br/>
+                Ti fa prendere decisioni e iniziare a ragionare da professionista d&apos;élite, non da operatore qualunque.
           </p>
           <a
             href="#percorso"
@@ -100,7 +121,7 @@ export default function Home() {
       {/* PERCORSO — BIANCO */}
       <section id="percorso" className="bg-brand-white text-brand-black py-24 px-6 md:px-12 xl:px-24">
         <div className="max-w-5xl mx-auto">
-          <h2 className="font-display text-3xl mb-8 text-center text-brand-black">Percorso Strategico Evolutivo</h2>
+          <h2 className="font-display text-3xl mb-8 text-center text-brand-black">METODO ELITE</h2>
 
           {/* TIMELINE */}
           <section className="py-12">
@@ -112,8 +133,8 @@ export default function Home() {
                 <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.2 }} viewport={{ once: true }}>
                   <div className="pl-6 relative">
                     <div className="absolute left-[-14px] top-1 w-4 h-4 bg-brand-rust rounded-full"></div>
-                    <h4 className="text-xl font-semibold text-brand-black">1. Esplora</h4>
-                    <p className="text-brand-black/70">Consapevolezza, verità, roadmap iniziale — test diagnostici e mappatura punti ciechi.</p>
+                    <h4 className="text-xl font-semibold text-brand-black">1. ESPLORA</h4>
+                    <p className="text-brand-black/70">Capire esattamente chi sei come professionista, cosa vuoi ottenere e quali ostacoli ti stanno bloccando.</p>
                   </div>
                 </motion.div>
 
@@ -121,8 +142,8 @@ export default function Home() {
                 <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.2 }} viewport={{ once: true }}>
                   <div className="pl-6 relative">
                     <div className="absolute left-[-14px] top-1 w-4 h-4 bg-brand-rust rounded-full"></div>
-                    <h4 className="text-xl font-semibold text-brand-black">2. Lancia</h4>
-                    <p className="text-brand-black/70">Posizionamento, mindset strategico, bio professionale e piano d’azione personalizzato.</p>
+                    <h4 className="text-xl font-semibold text-brand-black">2. LANCIA</h4>
+                    <p className="text-brand-black/70">Tradurre la nuova consapevolezza in un piano concreto per raggiungere i tuoi obiettivi e iniziare a vedere i primi risultati.</p>
                   </div>
                 </motion.div>
 
@@ -130,8 +151,8 @@ export default function Home() {
                 <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.2 }} viewport={{ once: true }}>
                   <div className="pl-6 relative">
                     <div className="absolute left-[-14px] top-1 w-4 h-4 bg-brand-rust rounded-full"></div>
-                    <h4 className="text-xl font-semibold text-brand-black">3. Imposta</h4>
-                    <p className="text-brand-black/70">Routine produttiva, strategia personale, verticalità e impatto reale sul tuo mercato.</p>
+                    <h4 className="text-xl font-semibold text-brand-black">3. IMPOSTA</h4>
+                    <p className="text-brand-black/70">Creare un tuo stile professionale unico che ti distingua e renda riconoscibile sul mercato.</p>
                   </div>
                 </motion.div>
 
@@ -139,8 +160,8 @@ export default function Home() {
                 <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.2 }} viewport={{ once: true }}>
                   <div className="pl-6 relative">
                     <div className="absolute left-[-14px] top-1 w-4 h-4 bg-brand-rust rounded-full"></div>
-                    <h4 className="text-xl font-semibold text-brand-black">4. Testa</h4>
-                    <p className="text-brand-black/70">KPI, miglioramento continuo e creazione di un sistema sostenibile di crescita.</p>
+                    <h4 className="text-xl font-semibold text-brand-black">4. TESTA</h4>
+                    <p className="text-brand-black/70">Capire cosa funziona meglio per te, migliorare continuamente e far crescere la tua attività in modo sostenibile.</p>
                   </div>
                 </motion.div>
 
@@ -148,8 +169,8 @@ export default function Home() {
                 <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.2 }} viewport={{ once: true }}>
                   <div className="pl-6 relative">
                     <div className="absolute left-[-14px] top-1 w-4 h-4 bg-brand-rust rounded-full"></div>
-                    <h4 className="text-xl font-semibold text-brand-black">5. Evolvi</h4>
-                    <p className="text-brand-black/70">Consolidamento, piano di sviluppo personale, toolkit operativo e piena autonomia.</p>
+                    <h4 className="text-xl font-semibold text-brand-black">5. EVOLVI</h4>
+                    <p className="text-brand-black/70">Consolidare i risultati ottenuti e avere un piano chiaro per continuare a crescere in autonomia.</p>
                   </div>
                 </motion.div>
 
