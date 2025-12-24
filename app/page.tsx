@@ -95,12 +95,12 @@ export default function Home() {
                 Il Metodo non ti coccola. Ti sveglia.<br/>
                 Ti fa prendere decisioni e iniziare a ragionare da professionista d&apos;élite, non da operatore qualunque.
           </p>
-          <a
-            href="#percorso"
-            className="mt-5 inline-block px-6 py-3 bg-brand-rust text-white font-semibold rounded-full shadow hover:scale-105 transition"
-          >
-            Scopri il percorso
-          </a>
+            <a
+              href="#percorso"
+              className="mt-5 block w-fit mx-auto px-6 py-3 bg-brand-rust text-white font-semibold rounded-full shadow hover:scale-105 transition"
+            >
+              Scopri il percorso
+            </a>
         </div>
 
         {/* sottile fascia bianca per raccordare alla sezione successiva */}
