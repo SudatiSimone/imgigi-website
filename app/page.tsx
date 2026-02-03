@@ -47,7 +47,7 @@ export default function Home() {
 
         <div className="relative z-10 flex justify-center md:justify-end">
           <img
-            src="/hero.jpg"
+            src="/heroDesktop.jpg"
             alt="Gianluigi Merisio"
             className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,.25)]"
           />
@@ -58,7 +58,7 @@ export default function Home() {
       <div className="md:hidden">
         <div className="px-4 pt-2">
           <img
-            src="/hero.jpg"
+            src="/heroDesktop.jpg"
             alt="Gianluigi Merisio"
             className="mx-auto w-56 sm:w-64 h-auto object-contain"
             style={{
