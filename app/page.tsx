@@ -33,19 +33,9 @@ export default function Home() {
             Diventa un <br /> Terapista D&apos;Elite
           </h1>
           <p className="text-lg md:text-xl text-white/90">
-            Il Metodo Terapisti d’Élite nasce per un motivo semplice: smettere di lavorare tanto e valere poco.
-            È per chi ha competenze vere, ma è ancora incastrato in un lavoro precario, frammentato e sottopagato.<br/>
-            Per chi sa fare il suo mestiere, ma non sa farlo funzionare.<br/>
-            Non è l’ennesimo corso motivazionale.<br/>
-            È un sistema pratico che ti costringe a fare ordine e a costruire un lavoro serio:
-            sapere cosa offri, quanto vali, a chi ti rivolgi e come farti pagare.
-            <br />
-            Qui trasformi il talento in identità professionale.<br/>
-            Offerta, clienti, tempo, soldi e comunicazione: tutto torna sotto controllo.
-            <br/>
-            Il Metodo non ti coccola.<br/>
-            Ti sveglia.<br/>
-            Ti fa prendere decisioni e iniziare a ragionare da professionista d&apos;élite, non da operatore qualunque.
+            Smetti di lavorare tanto e valere poco.<br />
+            Ti accompagno a trasformare le tue competenze in un lavoro strutturato, riconoscibile e sostenibile.<br />
+            Niente motivazione. Metodo. Scelte. Risultati.
           </p>
           <a
             href="#percorso"
@@ -84,16 +74,9 @@ export default function Home() {
             Diventa un <br /> Terapista D&apos;Elite
           </h1>
           <p className="mt-3 text-[15px] leading-relaxed text-brand-black/70">
-                Il Metodo Terapisti d’Élite nasce per un motivo semplice: smettere di lavorare tanto e valere poco.
-                È per chi ha competenze vere, ma è ancora incastrato in un lavoro precario, frammentato e sottopagato. <br/>
-                Per chi sa fare il suo mestiere, ma non sa farlo funzionare.
-                Non è l’ennesimo corso motivazionale.<br/>
-                È un sistema pratico che ti costringe a fare ordine e a costruire un lavoro serio:
-                sapere cosa offri, quanto vali, a chi ti rivolgi e come farti pagare.
-                Qui trasformi il talento in identità professionale.<br/>
-                Offerta, clienti, tempo, soldi e comunicazione: tutto torna sotto controllo.<br/>
-                Il Metodo non ti coccola. Ti sveglia.<br/>
-                Ti fa prendere decisioni e iniziare a ragionare da professionista d&apos;élite, non da operatore qualunque.
+            Smetti di lavorare tanto e valere poco.<br />
+            Ti accompagno a trasformare le tue competenze in un lavoro strutturato, riconoscibile e sostenibile.<br />
+            Niente motivazione. Metodo. Scelte. Risultati.
           </p>
             <a
               href="#percorso"
@@ -319,22 +302,29 @@ export default function Home() {
           <div className="space-y-5">
             <motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.4 }} viewport={{ once: true }}>
               <FaqItem
-                question="Devo avere già un’attività avviata per accedere al percorso?"
-                answer="No, puoi iniziare anche se sei in fase di transizione o apertura. Il percorso ti aiuterà proprio a partire con consapevolezza e metodo."
+                question="Ma io sono abbastanza brava/o per fare un percorso del genere?"
+                answer="Se ti stai facendo questa domanda, probabilmente sì. Questo percorso non è per chi cerca conferme, ma per chi è disposto a guardarsi allo specchio e migliorare. Non servono superpoteri: serve onestà, voglia di crescere e disponibilità a cambiare approccio."
               />
             </motion.section>
 
             <motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.4 }} viewport={{ once: true }}>
               <FaqItem
-                question="Posso pagare in due rate?"
-                answer="Sì, puoi versare in 2 o 3 comode rate."
+                question="Questo funziona anche se non sono portata/o per vendere?"
+                answer="Qui non impari a “vendere”. Impari a dare valore a quello che fai, comunicarlo in modo chiaro e farti scegliere senza forzature. Se oggi fai fatica a venderti, non è un limite: è un punto di partenza."
               />
             </motion.section>
 
             <motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.4 }} viewport={{ once: true }}>
               <FaqItem
-                question="Cosa succede se salto una sessione?"
-                answer="Nessun problema: possiamo riprogrammarla entro 10 giorni. La flessibilità fa parte del mio metodo."
+                question="Che differenza c’è tra questo e un corso di formazione classico?"
+                answer="Qui non accumuli informazioni. Qui lavori su di te, sul tuo lavoro reale e sui tuoi numeri. Ogni decisione ha un impatto concreto sul tuo modo di lavorare e guadagnare."
+              />
+            </motion.section>
+
+            <motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.4 }} viewport={{ once: true }}>
+              <FaqItem
+                question="Perché dovrei fidarmi proprio di te?"
+                answer="Non devi fidarti di me: devi vedere i risultati. Il mio lavoro è guidarti con metodo, decisioni concrete e numeri chiari. Se non posso aiutarti davvero, te lo dico subito."
               />
             </motion.section>
           </div>
